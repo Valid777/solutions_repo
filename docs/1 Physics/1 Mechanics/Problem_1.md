@@ -1,4 +1,3 @@
-# Problem 1
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -23,6 +22,20 @@ R_moon = range_projectile(v0, theta_deg, g_moon)
 plt.figure(figsize=(10, 6))
 plt.plot(theta_deg, R_earth, label=f'Earth (g = {g_earth} m/s²)', color='blue')
 plt.plot(theta_deg, R_moon, label=f'Moon (g = {g_moon} m/s²)', color='red')
+
+# Find max range and corresponding angle for Earth
+max_R_earth = np.max(R_earth)
+max_theta_earth = theta_deg[np.argmax(R_earth)]
+plt.plot(max_theta_earth, max_R_earth, 'bo')  # Mark max point for Earth
+plt.text(max_theta_earth, max_R_earth + 5, f'Max Earth: {max_R_earth:.2f} m at {max_theta_earth}°', color='blue')
+
+# Find max range and corresponding angle for Moon
+max_R_moon = np.max(R_moon)
+max_theta_moon = theta_deg[np.argmax(R_moon)]
+plt.plot(max_theta_moon, max_R_moon, 'ro')  # Mark max point for Moon
+plt.text(max_theta_moon, max_R_moon + 5, f'Max Moon: {max_R_moon:.2f} m at {max_theta_moon}°', color='red')
+
+# Labels and title
 plt.xlabel('Angle of Projection (degrees)')
 plt.ylabel('Range (meters)')
 plt.title(f'Range vs Angle of Projection (v₀ = {v0} m/s)')
@@ -30,7 +43,6 @@ plt.grid(True)
 plt.legend()
 plt.show()
 
-# Find max range and corresponding angle
-max_R_earth = np.max(R_earth)
-max_theta_earth = theta_deg[np.argmax(R_earth)]
+# Print max range and angle for both Earth and Moon
 print(f"Max range on Earth: {max_R_earth:.2f} m at {max_theta_earth}°")
+print(f"Max range on Moon: {max_R_moon:.2f} m at {max_theta_moon}°")
