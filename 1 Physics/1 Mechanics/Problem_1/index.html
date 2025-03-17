@@ -172,7 +172,35 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
-<p>trdfgertyyhuj</p>
+<p>import numpy as np
+import matplotlib.pyplot as plt</p>
+<h1 id="constants">Constants</h1>
+<p>g_earth = 9.8  # m/s^2
+g_moon = 1.62  # m/s^2
+v0 = 20.0      # initial velocity (m/s)</p>
+<h1 id="range-function">Range function</h1>
+<p>def range_projectile(v0, theta_deg, g):
+    theta = np.radians(theta_deg)  # Convert to radians
+    return (v0**2 * np.sin(2 * theta)) / g</p>
+<h1 id="angles-from-0-to-90-degrees">Angles from 0 to 90 degrees</h1>
+<p>theta_deg = np.linspace(0, 90, 91)</p>
+<h1 id="calculate-range-for-earth-and-moon">Calculate range for Earth and Moon</h1>
+<p>R_earth = range_projectile(v0, theta_deg, g_earth)
+R_moon = range_projectile(v0, theta_deg, g_moon)</p>
+<h1 id="plotting">Plotting</h1>
+<p>plt.figure(figsize=(10, 6))
+plt.plot(theta_deg, R_earth, label=f'Earth (g = {g_earth} m/s²)', color='blue')
+plt.plot(theta_deg, R_moon, label=f'Moon (g = {g_moon} m/s²)', color='red')
+plt.xlabel('Angle of Projection (degrees)')
+plt.ylabel('Range (meters)')
+plt.title(f'Range vs Angle of Projection (v₀ = {v0} m/s)')
+plt.grid(True)
+plt.legend()
+plt.show()</p>
+<h1 id="find-max-range-and-corresponding-angle">Find max range and corresponding angle</h1>
+<p>max_R_earth = np.max(R_earth)
+max_theta_earth = theta_deg[np.argmax(R_earth)]
+print(f"Max range on Earth: {max_R_earth:.2f} m at {max_theta_earth}°")</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
