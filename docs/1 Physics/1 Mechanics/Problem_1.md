@@ -1,68 +1,43 @@
-# Investigating the Range as a Function of the Angle of Projection
+# Problem 1
+### Investigating the Range as a Function of the Angle of Projection
 
-## 1. Theoretical Foundation
+### Introduction
+Projectile motion is a fundamental concept in physics, describing the motion of an object under the influence of gravity alone, after being projected with an initial velocity. One of the key characteristics of projectile motion is the range, which depends on the angle of projection. This investigation aims to analyze how the range varies as a function of the launch angle.
 
-Projectile motion describes the motion of an object thrown into the air, subject to only the acceleration of gravity.
+### Theory
+The motion of a projectile launched from ground level can be analyzed using the equations of kinematics. The horizontal and vertical components of motion are given by:
 
-**Assumptions:**
-- No air resistance
-- Flat ground (launch and landing at the same height)
-- Constant gravitational acceleration `g`
+- *Horizontal motion:*
+  $$
+  x = v_0 \cos(\theta) \cdot t
+  $$
+- *Vertical motion:*
+  $$
+  y = v_0 \sin(\theta) \cdot t - \frac{1}{2} g t^2
+  $$
 
-The equations of motion are:
-- Horizontal motion: `x(t) = v0 * cos(θ) * t`
-- Vertical motion: `y(t) = v0 * sin(θ) * t - (1/2) * g * t^2`
+where:
+- \( x \) and \( y \) are the horizontal and vertical displacements, respectively,
+- \( v_0 \) is the initial velocity,
+- \( \theta \) is the angle of projection,
+- \( g \) is the acceleration due to gravity (9.81 m/s²), and
+- \( t \) is the time of flight.
 
-At the time of landing, `y(t) = 0`. Solving for time of flight `T`:
+The time of flight \( T \) can be found by setting \( y = 0 \):
+  $$
+  T = \frac{2 v_0 \sin(\theta)}{g}
+  $$
 
-The **horizontal range** `R` is:
+The range \( R \) of the projectile is given by:
+  $$
+  R = v_0 \cos(\theta) \cdot T
+  $$
+Substituting \( T \):
+  $$
+  R = \frac{v_0^2 \sin(2\theta)}{g}
+  $$
+This equation shows that the range is maximized when \( \sin(2\theta) \) is maximized, which occurs at \( 2\theta = 90^\circ \), or \( \theta = 45^\circ \).
 
-### Key Takeaways:
-- `R` depends on the sine of twice the projection angle `2θ`
-- Maximum range occurs at `θ = 45°` (when sin(2θ) = 1)
-
----
-
-## 2. Analysis of the Range
-
-We will simulate the relationship between the angle `θ` and range `R` for different initial velocities `v0` and gravitational accelerations `g`.
-
-## 3. Implementation
-
-### Importing Libraries
-```python
-import numpy as np
-import matplotlib.pyplot as plt
-def projectile_range(v0, theta_deg, g=9.81):
-    theta_rad = np.radians(theta_deg)
-    R = (v0**2) * np.sin(2 * theta_rad) / g
-    return R
-angles = np.linspace(0, 90, 100)  # angles from 0 to 90 degrees
-
-# Different initial velocities
-velocities = [10, 20, 30]  # m/s
-g_values = [9.81, 1.62, 24.79]  # Earth, Moon, Jupiter gravity
-plt.figure(figsize=(12, 6))
-
-for v0 in velocities:
-    ranges = projectile_range(v0, angles)
-    plt.plot(angles, ranges, label=f'v₀ = {v0} m/s')
-
-plt.title('Range vs Angle of Projection (Earth gravity)')
-plt.xlabel('Angle of Projection (degrees)')
-plt.ylabel('Range (m)')
-plt.legend()
-plt.grid(True)
-plt.show()
-plt.figure(figsize=(12, 6))
-
-for g in g_values:
-    ranges = projectile_range(20, angles, g=g)
-    plt.plot(angles, ranges, label=f'g = {g} m/s²')
-
-plt.title('Range vs Angle of Projection (Different Gravities)')
-plt.xlabel('Angle of Projection (degrees)')
-plt.ylabel('Range (m)')
-plt.legend()
-plt.grid(True)
-plt.show()
+#### *Visual Representation*
+![Projectile Motion Diagram](Projectile_motion.png)
+Figure 1: Diagram showing projectile motion with different angles of projection.
