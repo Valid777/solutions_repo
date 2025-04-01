@@ -19,13 +19,13 @@ Projectile motion follows from Newton's second law of motion. The standard equat
    $$ y = v_0 \sin(\theta) t - \frac{1}{2} g t^2 $$  
    The vertical motion follows a parabolic trajectory due to the acceleration caused by gravity.
 
-3. **Time of flight:**  
-   Solving for the time when the projectile returns to the initial height ($y = 0$):  
+3. **Time of flight:**   
    $$ t = \frac{2 v_0 \sin(\theta)}{g} $$
+    Solving for the time when the projectile returns to the initial height ($y = 0$): 
 
 4. **Range equation:**  
+  $$ R = \frac{v_0^2 \sin(2\theta)}{g} $$
    Substituting time into the horizontal motion equation gives the range:  
-   $$ R = \frac{v_0^2 \sin(2\theta)}{g} $$
 
 This equation reveals that the range depends on the sine of twice the launch angle, peaking at $\theta = 45^\circ$.
 
