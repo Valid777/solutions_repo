@@ -11,31 +11,23 @@ What makes this topic particularly compelling is the number of free parameters i
 ### Governing Equations
 Projectile motion follows from Newton's second law of motion. The standard equations for motion in two dimensions are:
 
-1. **Horizontal motion:**
-   \[
-   x = v_0 \cos(\theta) t
-   \]
+1. **Horizontal motion:**  
+   $$ x = v_0 \cos(\theta) t $$  
    Since there is no acceleration in the horizontal direction (ignoring air resistance), velocity remains constant.
 
-2. **Vertical motion:**
-   \[
-   y = v_0 \sin(\theta) t - \frac{1}{2} g t^2
-   \]
+2. **Vertical motion:**  
+   $$ y = v_0 \sin(\theta) t - \frac{1}{2} g t^2 $$  
    The vertical motion follows a parabolic trajectory due to the acceleration caused by gravity.
 
-3. **Time of flight:**
-   Solving for the time when the projectile returns to the initial height (\( y = 0 \)):
-   \[
-   t = \frac{2 v_0 \sin(\theta)}{g}
-   \]
+3. **Time of flight:**  
+   Solving for the time when the projectile returns to the initial height ($ y = 0 $):  
+   $$ t = \frac{2 v_0 \sin(\theta)}{g} $$
 
-4. **Range equation:**
-   Substituting time into the horizontal motion equation gives the range:
-   \[
-   R = \frac{v_0^2 \sin(2\theta)}{g}
-   \]
+4. **Range equation:**  
+   Substituting time into the horizontal motion equation gives the range:  
+   $$ R = \frac{v_0^2 \sin(2\theta)}{g} $$
 
-This equation reveals that the range depends on the sine of twice the launch angle, peaking at \( \theta = 45^\circ \).
+This equation reveals that the range depends on the sine of twice the launch angle, peaking at $ \theta = 45^\circ $.
 
 ---
 
@@ -46,12 +38,12 @@ From the range equation, we observe:
 - Complementary angles (e.g., **30° and 60°**) yield the same range.
 
 ### Effect of Other Parameters
-- **Initial velocity (\( v_0 \))**: Higher velocity increases range quadratically.
-- **Gravitational acceleration (\( g \))**: A stronger gravitational pull decreases range.
-- **Launch height (\( h \))**: If launched from a height \( h \), a more complex range equation emerges:
-  \[
+- **Initial velocity ($ v_0 $)**: Higher velocity increases range quadratically.
+- **Gravitational acceleration ($ g $)**: A stronger gravitational pull decreases range.
+- **Launch height ($ h $)**: If launched from a height $ h $, a more complex range equation emerges:
+  $$
   R = v_0 \cos(\theta) \left( \frac{v_0 \sin(\theta) + \sqrt{(v_0 \sin(\theta))^2 + 2gh}}{g} \right)
-  \]
+  $$
 
 ---
 
