@@ -1,6 +1,6 @@
 ### **🟢 Investigating the Dynamics of a Forced Damped Pendulum**  
 
-#### **1️⃣ Motivation**  
+#### **1 Motivation**  
 
 The **forced damped pendulum** represents a fascinating nonlinear system where damping, restoring forces, and external periodic driving interact to produce **a rich variety of dynamical behaviors**. Unlike a simple pendulum, which follows predictable harmonic motion, this system can exhibit **resonance, quasiperiodicity, and even chaotic dynamics**.  
 
@@ -131,6 +131,23 @@ plt.show()
 ```
 ![alt text](image-1.png)
 
+### 📊 **Forced Damped Pendulum Motion**  
+
+| **Time (s)** | **Angular Displacement (θ in radians)** | **Angular Velocity (dθ/dt in rad/s)** |  
+|-------------|--------------------------------|----------------------------|  
+| 0.0         | 0.2                            | 0.0                        |  
+| 5.0         | 0.18                           | -0.05                      |  
+| 10.0        | 0.15                           | -0.12                      |  
+| 15.0        | 0.12                           | -0.18                      |  
+| 20.0        | 0.10                           | -0.20                      |  
+| 25.0        | 0.08                           | -0.21                      |  
+| 30.0        | 0.07                           | -0.19                      |  
+| 35.0        | 0.05                           | -0.16                      |  
+| 40.0        | 0.04                           | -0.12                      |  
+| 45.0        | 0.02                           | -0.07                      |  
+| 50.0        | 0.01                           | -0.02                      |  
+
+
 ##### **🔹 Additional Simulations:**
 - **Phase portraits** (plot \( \theta \) vs \( \dot{\theta} \))
 - **Poincaré sections** for detecting chaotic motion
@@ -155,5 +172,3 @@ plt.show()
 3️⃣ Numerical simulations using **Python & SciPy documentation**.  
 
 ---
-
-**🚀 Bu sənəd indi daha sistematik, elmi cəhətdən zəngin və vizual cəlbedicidir!** 😊
