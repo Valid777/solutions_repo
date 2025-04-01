@@ -49,7 +49,9 @@ From the range equation, we observe:
 
 ## Practical Applications
 This model is applicable in various real-world scenarios:
+
 - **Sports:** Understanding optimal angles in basketball, soccer, and golf.
+
 - **Engineering:** Ballistics, missile trajectories, and projectile-based calculations.
 - **Astrophysics:** Studying planetary landings and escape trajectories.
 - **Game Development:** Implementing realistic physics in video games.
