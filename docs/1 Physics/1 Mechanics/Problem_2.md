@@ -1,6 +1,6 @@
 ### **🟢 Investigating the Dynamics of a Forced Damped Pendulum**  
 
-#### **1 Motivation**  
+#### **1️⃣ Motivation**  
 
 The **forced damped pendulum** represents a fascinating nonlinear system where damping, restoring forces, and external periodic driving interact to produce **a rich variety of dynamical behaviors**. Unlike a simple pendulum, which follows predictable harmonic motion, this system can exhibit **resonance, quasiperiodicity, and even chaotic dynamics**.  
 
