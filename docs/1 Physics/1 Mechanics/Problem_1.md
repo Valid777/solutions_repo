@@ -92,17 +92,39 @@ projectile_range(v0=20)
 
 ![alt text](image.png)
 
-| Angle (°) | Flight Time (s) | Distance (m) |
-|-----------|----------------|--------------|
-| 10°       | 1.2            | 10.5         |
-| 20°       | 1.8            | 20.3         |
-| 30°       | 2.4            | 30.2         |
-| 40°       | 2.8            | 38.0         |
-| 45°       | 3.0            | 40.5         |
-| 50°       | 2.9            | 38.0         |
-| 60°       | 2.6            | 30.2         |
-| 70°       | 2.0            | 20.3         |
-| 80°       | 1.4            | 10.5         |
+<table style="width:100%; text-align: center; border-collapse: collapse;">
+  <tr>
+    <th>Angle (°)</th> <th>Flight Time (s)</th> <th>Distance (m)</th>
+  </tr>
+  <tr>
+    <td>10°</td> <td>1.2</td> <td>10.5</td>
+  </tr>
+  <tr>
+    <td>20°</td> <td>1.8</td> <td>20.3</td>
+  </tr>
+  <tr>
+    <td>30°</td> <td>2.4</td> <td>30.2</td>
+  </tr>
+  <tr>
+    <td>40°</td> <td>2.8</td> <td>38.0</td>
+  </tr>
+  <tr>
+    <td>45°</td> <td>3.0</td> <td>40.5</td>
+  </tr>
+  <tr>
+    <td>50°</td> <td>2.9</td> <td>38.0</td>
+  </tr>
+  <tr>
+    <td>60°</td> <td>2.6</td> <td>30.2</td>
+  </tr>
+  <tr>
+    <td>70°</td> <td>2.0</td> <td>20.3</td>
+  </tr>
+  <tr>
+    <td>80°</td> <td>1.4</td> <td>10.5</td>
+  </tr>
+</table>
+
 
 
 ---
