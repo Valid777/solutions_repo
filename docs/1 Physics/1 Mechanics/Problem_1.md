@@ -89,7 +89,8 @@ def projectile_range(v0, g=9.81):
 # Example usage
 projectile_range(v0=20)
 ```
-## 📈 **Graphical Analysis And Table Examples**  
+
+## Graphical Analysis And Table Examples  
 
 ![alt text](image.png)
 
