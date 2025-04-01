@@ -92,18 +92,6 @@ projectile_range(v0=20)
 
 ![alt text](image.png)
 
-| Angle (°) | Flight Time (s) | Distance (m) |
-|-----------|----------------|--------------|
-| 10°       | 1.2            | 10.5         |
-| 20°       | 1.8            | 20.3         |
-| 30°       | 2.4            | 30.2         |
-| 40°       | 2.8            | 38.0         |
-| 45°       | 3.0            | 40.5         |
-| 50°       | 2.9            | 38.0         |
-| 60°       | 2.6            | 30.2         |
-| 70°       | 2.0            | 20.3         |
-| 80°       | 1.4            | 10.5         |
-
 <table style="width:100%; text-align: center; border-collapse: collapse;">
   <tr>
     <th>Angle (°)</th> <th>Flight Time (s)</th> <th>Distance (m)</th>
@@ -136,8 +124,6 @@ projectile_range(v0=20)
     <td>80°</td> <td>1.4</td> <td>10.5</td>
   </tr>
 </table>
-
-
 
 ---
 
