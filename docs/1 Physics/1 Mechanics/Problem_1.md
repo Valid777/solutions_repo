@@ -26,7 +26,7 @@ Projectile motion follows from Newton's second law of motion. The standard equat
 4. **Range equation:**  
    Substituting time into the horizontal motion equation gives the range:  
    $$ R = \frac{v_0^2 \sin(2\theta)}{g} $$
-   
+
 This equation reveals that the range depends on the sine of twice the launch angle, peaking at $\theta = 45^\circ$.
 
 ---
@@ -58,7 +58,7 @@ This model is applicable in various real-world scenarios:
 
 ## Implementation
 We develop a Python script to:
-1. Simulate projectile motion.
+print("1. Simulate projectile motion.")
 2. Plot the range as a function of launch angle.
 3. Explore parameter variations.
 
