@@ -89,6 +89,7 @@ def projectile_range(v0, g=9.81):
 # Example usage
 projectile_range(v0=20)
 ```
+## 📈 **Graphical Analysis And Table Examples**  
 
 ![alt text](image.png)
 
@@ -139,6 +140,3 @@ projectile_range(v0=20)
 - Extending to 3D motion with wind effects.
 
 This study offers a detailed yet intuitive exploration of projectile motion, demonstrating its theoretical and practical significance across multiple fields.
-
-## 📈 **Graphical Analysis**  
-![Projectile Motion Graph](https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg)
