@@ -34,6 +34,7 @@ This equation reveals that the range depends on the sine of twice the launch ang
 ## Analysis of the Range
 ### Dependence on Angle of Projection
 From the range equation, we observe:
+
 - Maximum range occurs at **45 degrees** for a given initial velocity and gravitational acceleration.
 - Complementary angles (e.g., **30° and 60°**) yield the same range.
 
@@ -106,3 +107,5 @@ projectile_range(v0=20)
 
 This study offers a detailed yet intuitive exploration of projectile motion, demonstrating its theoretical and practical significance across multiple fields.
 
+## 📈 **Graphical Analysis**  
+![Projectile Motion Graph](https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg)
