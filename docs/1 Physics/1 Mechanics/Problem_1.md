@@ -27,7 +27,7 @@ Projectile motion follows from Newton's second law of motion. The standard equat
    Substituting time into the horizontal motion equation gives the range:  
    $$ R = \frac{v_0^2 \sin(2\theta)}{g} $$
 
-This equation reveals that the range depends on the sine of twice the launch angle, peaking at $ \theta = 45^\circ $.
+This equation reveals that the range depends on the sine of twice the launch angle, peaking at $\theta = 45^\circ$.
 
 ---
 
