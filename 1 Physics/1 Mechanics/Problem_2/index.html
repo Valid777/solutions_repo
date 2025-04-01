@@ -50,6 +50,34 @@
 </li>
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 2</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#1-motivation">1️⃣ Motivation</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#2-theoretical-foundation">2️⃣ Theoretical Foundation</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#small-angle-approximation">Small-Angle Approximation</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#energy-considerations">Energy Considerations</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#3-analysis-of-dynamics">3️⃣ Analysis of Dynamics</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#influence-of-parameters-on-motion">Influence of Parameters on Motion</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#transition-to-chaos">Transition to Chaos</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#4-practical-applications">4️⃣ Practical Applications</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#5-implementation-computational-model">5️⃣ Implementation (Computational Model)</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#additional-simulations">🔹 Additional Simulations:</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#6-conclusions-and-future-work">6️⃣ Conclusions and Future Work</a>
+</li>
 </ul>
 </li>
 </ul>
@@ -171,8 +199,141 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="problem-2">Problem 2</h1>
-<p>HELLO World this is a test message </p>
+<h3 id="investigating-the-dynamics-of-a-forced-damped-pendulum"><strong>🟢 Investigating the Dynamics of a Forced Damped Pendulum</strong></h3>
+<h4 id="1-motivation"><strong>1️⃣ Motivation</strong></h4>
+<p>The <strong>forced damped pendulum</strong> represents a fascinating nonlinear system where damping, restoring forces, and external periodic driving interact to produce <strong>a rich variety of dynamical behaviors</strong>. Unlike a simple pendulum, which follows predictable harmonic motion, this system can exhibit <strong>resonance, quasiperiodicity, and even chaotic dynamics</strong>.  </p>
+<p>Understanding these behaviors is essential for many practical applications, including:  </p>
+<ul>
+<li><strong>Vibration control</strong> in bridges and buildings 🌉  </li>
+<li><strong>Energy harvesting</strong> from oscillatory systems ⚡  </li>
+<li><strong>Mechanical resonance</strong> in engineering structures 🏗️  </li>
+<li><strong>Neuroscience and biomechanics</strong>, where oscillatory behavior plays a critical role 🧠  </li>
+</ul>
+<p>By systematically varying the <strong>damping coefficient, driving amplitude, and frequency</strong>, we explore the transition between <strong>regular oscillations, resonance, and chaos</strong>—a fundamental topic in <strong>nonlinear dynamics and complex systems</strong>.  </p>
+<hr/>
+<h4 id="2-theoretical-foundation"><strong>2️⃣ Theoretical Foundation</strong></h4>
+<p>The motion of a <strong>forced damped pendulum</strong> is governed by the nonlinear differential equation:  </p>
+<div class="arithmatex">\[
+\frac{d^2\theta}{dt^2} + b\frac{d\theta}{dt} + \frac{g}{L}\sin\theta = A\cos(\omega t)
+\]</div>
+<p>where:<br/>
+- <span class="arithmatex">\( \theta \)</span> is the angular displacement<br/>
+- <span class="arithmatex">\( b \)</span> is the damping coefficient<br/>
+- <span class="arithmatex">\( g \)</span> is the acceleration due to gravity<br/>
+- <span class="arithmatex">\( L \)</span> is the pendulum length<br/>
+- <span class="arithmatex">\( A \)</span> is the amplitude of the driving force<br/>
+- <span class="arithmatex">\( \omega \)</span> is the driving frequency  </p>
+<h5 id="small-angle-approximation"><strong>Small-Angle Approximation</strong></h5>
+<p>For small angles (<span class="arithmatex">\( \theta \approx \sin\theta \)</span>), the equation simplifies to:  </p>
+<div class="arithmatex">\[
+\frac{d^2\theta}{dt^2} + b\frac{d\theta}{dt} + \frac{g}{L}\theta = A\cos(\omega t)
+\]</div>
+<p>which resembles the equation for a <strong>driven damped harmonic oscillator</strong>. This enables us to analyze <strong>resonance conditions</strong>, where the system absorbs maximum energy from the external force.</p>
+<h5 id="energy-considerations"><strong>Energy Considerations</strong></h5>
+<p>The total energy of the system consists of:<br/>
+- <strong>Kinetic Energy:</strong> <span class="arithmatex">\( T = \frac{1}{2} m L^2 \dot{\theta}^2 \)</span><br/>
+- <strong>Potential Energy:</strong> <span class="arithmatex">\( U = mgL(1 - \cos\theta) \)</span><br/>
+- <strong>Dissipation due to Damping:</strong> <span class="arithmatex">\( P_{\text{loss}} \propto b \dot{\theta}^2 \)</span><br/>
+- <strong>Energy Input from Driving Force:</strong> <span class="arithmatex">\( P_{\text{drive}} \propto A\cos(\omega t) \dot{\theta} \)</span> </p>
+<p>By balancing energy terms, we can explore conditions for <strong>sustained oscillations, resonance, and chaotic motion</strong>.</p>
+<hr/>
+<h4 id="3-analysis-of-dynamics"><strong>3️⃣ Analysis of Dynamics</strong></h4>
+<h5 id="influence-of-parameters-on-motion"><strong>Influence of Parameters on Motion</strong></h5>
+<p>To understand the pendulum’s motion, we analyze the effects of:  </p>
+<ul>
+<li><strong>Damping Coefficient ( <span class="arithmatex">\( b \)</span> )</strong> </li>
+<li>High damping: Rapid stabilization, no oscillations  </li>
+<li>Low damping: Persistent oscillations, resonance effects  </li>
+<li>
+<p>Critical damping: Fastest return to equilibrium  </p>
+</li>
+<li>
+<p><strong>Driving Amplitude ( <span class="arithmatex">\( A \)</span> )</strong> </p>
+</li>
+<li>Small <span class="arithmatex">\( A \)</span>: Periodic oscillations  </li>
+<li>
+<p>Large <span class="arithmatex">\( A \)</span>: Chaotic motion emerges  </p>
+</li>
+<li>
+<p><strong>Driving Frequency ( <span class="arithmatex">\( \omega \)</span> )</strong> </p>
+</li>
+<li><span class="arithmatex">\( \omega \approx \omega_0 \)</span> (natural frequency): <strong>Resonance</strong> </li>
+<li>Higher/lower frequencies: Reduced oscillation amplitude  </li>
+</ul>
+<h5 id="transition-to-chaos"><strong>Transition to Chaos</strong></h5>
+<ul>
+<li>At certain parameter values, <strong>small changes in initial conditions lead to drastically different trajectories</strong> (sensitive dependence on initial conditions).  </li>
+<li><strong>Poincaré sections</strong> and <strong>bifurcation diagrams</strong> reveal chaotic regions.  </li>
+</ul>
+<hr/>
+<h4 id="4-practical-applications"><strong>4️⃣ Practical Applications</strong></h4>
+<p>The forced damped pendulum has real-world relevance in:  </p>
+<p>📌 <strong>Engineering:</strong> Vibration analysis in mechanical structures (suspension bridges, engines, rotating machinery).<br/>
+📌 <strong>Physics:</strong> Understanding <strong>nonlinear oscillations</strong> in electrical circuits (analogous to driven RLC circuits).<br/>
+📌 <strong>Energy Harvesting:</strong> Using resonance to extract <strong>mechanical energy from oscillatory motion</strong>.<br/>
+📌 <strong>Biomechanics &amp; Neuroscience:</strong> Human gait dynamics and rhythmic movements.  </p>
+<hr/>
+<h4 id="5-implementation-computational-model"><strong>5️⃣ Implementation (Computational Model)</strong></h4>
+<p>To <strong>simulate the pendulum motion</strong>, we use <strong>numerical methods</strong> (e.g., 4th-order Runge-Kutta). Below is a Python implementation using <strong>Matplotlib</strong> for visualization.</p>
+<pre><code class="language-python">import numpy as np
+import matplotlib.pyplot as plt
+from scipy.integrate import solve_ivp
+
+# Parameters
+b = 0.2      # Damping coefficient
+A = 1.2      # Driving force amplitude
+omega = 2.0  # Driving frequency
+g = 9.8      # Gravity
+L = 1.0      # Pendulum length
+
+# Equation of Motion
+def forced_damped_pendulum(t, y):
+    theta, omega_dot = y
+    dtheta_dt = omega_dot
+    domega_dt = -b * omega_dot - (g/L) * np.sin(theta) + A * np.cos(omega * t)
+    return [dtheta_dt, domega_dt]
+
+# Initial Conditions
+y0 = [0.2, 0.0]  # Small initial displacement
+
+# Time Span
+t_span = (0, 50)
+t_eval = np.linspace(0, 50, 1000)
+
+# Solve the ODE
+sol = solve_ivp(forced_damped_pendulum, t_span, y0, t_eval=t_eval, method='RK45')
+
+# Plot Results
+plt.figure(figsize=(8,5))
+plt.plot(sol.t, sol.y[0], label="Angular Displacement (θ)")
+plt.xlabel("Time (s)")
+plt.ylabel("Angle (radians)")
+plt.title("Forced Damped Pendulum Motion")
+plt.legend()
+plt.grid()
+plt.show()
+</code></pre>
+<h5 id="additional-simulations"><strong>🔹 Additional Simulations:</strong></h5>
+<ul>
+<li><strong>Phase portraits</strong> (plot <span class="arithmatex">\( \theta \)</span> vs <span class="arithmatex">\( \dot{\theta} \)</span>)</li>
+<li><strong>Poincaré sections</strong> for detecting chaotic motion</li>
+<li><strong>Bifurcation diagrams</strong> by varying <span class="arithmatex">\( A \)</span> or <span class="arithmatex">\( \omega \)</span></li>
+</ul>
+<hr/>
+<h4 id="6-conclusions-and-future-work"><strong>6️⃣ Conclusions and Future Work</strong></h4>
+<p>✅ The <strong>forced damped pendulum</strong> provides a <strong>rich testbed</strong> for exploring nonlinear dynamics.<br/>
+✅ <strong>Resonance, quasiperiodicity, and chaos</strong> arise depending on system parameters.<br/>
+✅ Future work could include:<br/>
+   - <strong>Air resistance models</strong> (nonlinear damping)<br/>
+   - <strong>Non-periodic forcing</strong> (random or aperiodic external forces)<br/>
+   - <strong>Coupled oscillators</strong> for complex system modeling  </p>
+<hr/>
+<h3 id="references-further-reading">📚 <strong>References &amp; Further Reading</strong></h3>
+<p>1️⃣ Strogatz, S. H. (2018). <em>Nonlinear Dynamics and Chaos</em>.<br/>
+2️⃣ Taylor, J. R. (2005). <em>Classical Mechanics</em>.<br/>
+3️⃣ Numerical simulations using <strong>Python &amp; SciPy documentation</strong>.  </p>
+<hr/>
+<p><strong>🚀 Bu sənəd indi daha sistematik, elmi cəhətdən zəngin və vizual cəlbedicidir!</strong> 😊</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
