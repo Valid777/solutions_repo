@@ -58,6 +58,7 @@ This model is applicable in various real-world scenarios:
 
 ## Implementation
 We develop a Python script to:
+
 1. Simulate projectile motion.
 
 2. Plot the range as a function of launch angle.
@@ -92,9 +93,9 @@ projectile_range(v0=20)
 
 ## Discussion and Limitations
 ### Idealized Model Assumptions:
-- No air resistance: In real scenarios, drag significantly alters projectile motion.
-- Constant gravity: Small deviations occur with altitude changes.
-- Flat terrain: Uneven surfaces require terrain-based modeling.
+- **No air resistance:** In real scenarios, drag significantly alters projectile motion.
+- **Constant gravity:** Small deviations occur with altitude changes.
+- **Flat terrain:** Uneven surfaces require terrain-based modeling.
 
 ### Future Enhancements:
 - Incorporating air resistance for more realistic simulations.
