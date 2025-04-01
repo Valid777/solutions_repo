@@ -20,7 +20,7 @@ Projectile motion follows from Newton's second law of motion. The standard equat
    The vertical motion follows a parabolic trajectory due to the acceleration caused by gravity.
 
 3. **Time of flight:**  
-   Solving for the time when the projectile returns to the initial height ($ y = 0 $):  
+   Solving for the time when the projectile returns to the initial height ($y = 0$):  
    $$ t = \frac{2 v_0 \sin(\theta)}{g} $$
 
 4. **Range equation:**  
@@ -38,9 +38,9 @@ From the range equation, we observe:
 - Complementary angles (e.g., **30° and 60°**) yield the same range.
 
 ### Effect of Other Parameters
-- **Initial velocity ($ v_0 $)**: Higher velocity increases range quadratically.
-- **Gravitational acceleration ($ g $)**: A stronger gravitational pull decreases range.
-- **Launch height ($ h $)**: If launched from a height $ h $, a more complex range equation emerges:
+- **Initial velocity ($v_0$)**: Higher velocity increases range quadratically.
+- **Gravitational acceleration ($g$)**: A stronger gravitational pull decreases range.
+- **Launch height ($h$)**: If launched from a height $h$, a more complex range equation emerges:
   $$
   R = v_0 \cos(\theta) \left( \frac{v_0 \sin(\theta) + \sqrt{(v_0 \sin(\theta))^2 + 2gh}}{g} \right)
   $$
