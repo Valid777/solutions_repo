@@ -129,6 +129,7 @@ plt.legend()
 plt.grid()
 plt.show()
 ```
+![alt text](image-1.png)
 
 ##### **🔹 Additional Simulations:**
 - **Phase portraits** (plot \( \theta \) vs \( \dot{\theta} \))
