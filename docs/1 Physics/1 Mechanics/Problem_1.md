@@ -58,7 +58,6 @@ This model is applicable in various real-world scenarios:
 
 ## Implementation
 We develop a Python script to:
-
 1. Simulate projectile motion.
 
 2. Plot the range as a function of launch angle.
