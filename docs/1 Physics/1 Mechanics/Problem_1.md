@@ -84,6 +84,8 @@ def projectile_range(v0, g=9.81):
 projectile_range(v0=20)
 ```
 
+![alt text](image.png)
+
 ---
 
 ## Discussion and Limitations
