@@ -97,10 +97,9 @@ $$
 
 ---
 
-## 4. Python Simulation and Visualization
+### 4. Python Simulation and Visualization
 
-### Libraries
-
+**Libraries**  
 To calculate and visualize these velocities, we will use Python and the `numpy` and `matplotlib` libraries.
 
 ```python
@@ -111,16 +110,16 @@ import matplotlib.pyplot as plt
 G = 6.67430e-11  # Gravitational constant (m^3 kg^-1 s^-2)
 
 # Masses of celestial bodies (kg)
-M_earth = 5.972e24  # Earth mass
-M_mars = 6.4171e23  # Mars mass
-M_jupiter = 1.898e27  # Jupiter mass
-M_sun = 1.989e30  # Sun mass
+M_earth = 5.972e24     # Earth mass
+M_mars = 6.4171e23     # Mars mass
+M_jupiter = 1.898e27   # Jupiter mass
+M_sun = 1.989e30       # Sun mass
 
 # Radii of celestial bodies (m)
-r_earth = 6.371e6  # Earth radius
-r_mars = 3.3962e6  # Mars radius
-r_jupiter = 6.991e7  # Jupiter radius
-r_sun = 6.9634e8  # Sun radius
+r_earth = 6.371e6      # Earth radius
+r_mars = 3.3962e6      # Mars radius
+r_jupiter = 6.991e7    # Jupiter radius
+r_sun = 6.9634e8       # Sun radius
 
 # Function to calculate escape velocity
 def escape_velocity(M, r):
