@@ -20,11 +20,11 @@ $$
 
 **Where:**
 
-- \( G \) is the gravitational constant,
+- \( "G" \) is the gravitational constant.
 
-- \( M \) is the mass of the celestial body,
+- \( "M" \) is the mass of the celestial body.
 
-- \( r \) is the distance from the center of the body (usually the surface).
+- \( "r" \) is the distance from the center of the body (usually the surface).
 
 ### 2.2. First Cosmic Velocity (Orbital Velocity)
 
