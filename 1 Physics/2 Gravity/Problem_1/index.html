@@ -61,8 +61,10 @@
 <li class="toctree-l3"><a class="reference internal" href="#1-theoretical-derivation">1. Theoretical Derivation</a>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#2-astronomical-implications">2. Astronomical Implications</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#3-simulation-python-code">3. Simulation (Python Code)</a>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#3-simulation-python-code">3. Simulation (Python Code)</a>
+</ul>
 </li>
 </ul>
 </li>
@@ -218,25 +220,28 @@ T^2 \propto r^3
 <li>Used in planning satellite launches and interplanetary missions.</li>
 </ul>
 <hr/>
-<h2 id="3-simulation-python-code"><strong>3. Simulation (Python Code)</strong></h2>
-<p>```python
-import numpy as np
-import matplotlib.pyplot as plt</p>
-<h1 id="constants">Constants</h1>
-<p>G = 6.67430e-11  # m^3/kg/s^2
-M = 5.972e24     # mass of Earth in kg</p>
-<h1 id="radii-in-meters-example-low-earth-orbit-to-geostationary">Radii in meters (example: Low Earth Orbit to Geostationary)</h1>
-<p>radii = np.linspace(7e6, 4.2e7, 100)
-periods = 2 * np.pi * np.sqrt(radii**3 / (G * M))</p>
-<h1 id="plotting">Plotting</h1>
-<p>plt.figure(figsize=(8, 5))
+<h3 id="3-simulation-python-code">3. Simulation (Python Code)</h3>
+<pre><code class="language-python">import numpy as np
+import matplotlib.pyplot as plt
+
+# Constants
+G = 6.67430e-11  # gravitational constant (m^3/kg/s^2)
+M = 5.972e24     # mass of Earth in kg
+
+# Radii in meters (example: Low Earth Orbit to Geostationary)
+radii = np.linspace(7e6, 4.2e7, 100)
+periods = 2 * np.pi * np.sqrt(radii**3 / (G * M))
+
+# Plotting
+plt.figure(figsize=(8, 5))
 plt.plot(radii / 1e6, periods / 3600, color='royalblue')
-plt.xlabel('Orbital Radius (x10⁶ m)')
+plt.xlabel('Orbital Radius (×10⁶ m)')
 plt.ylabel('Orbital Period (hours)')
-plt.title('Kepler’s Third Law: <span class="arithmatex">\(T^2 \\propto r^3\)</span>')
+plt.title("Kepler’s Third Law: Orbital Period vs Radius")
 plt.grid(True)
 plt.tight_layout()
-plt.show()</p>
+plt.show()
+</code></pre>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
