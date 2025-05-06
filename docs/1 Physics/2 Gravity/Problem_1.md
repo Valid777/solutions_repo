@@ -24,7 +24,7 @@ Starting from Newton’s law of universal gravitation and centripetal force:
 F_{\text{gravity}} = F_{\text{centripetal}} \Rightarrow \frac{G M m}{r^2} = \frac{m v^2}{r}
 \]
 
-Simplifying and solving for orbital velocity $v$:
+Simplifying and solving for orbital velocity \( v \):
 
 \[
 v = \sqrt{\frac{G M}{r}}
