@@ -24,7 +24,7 @@ Starting from Newton’s law of universal gravitation and centripetal force:
 F_{\text{gravity}} = F_{\text{centripetal}} \Rightarrow \frac{G M m}{r^2} = \frac{m v^2}{r}
 \]
 
-Simplifying and solving for orbital velocity \( v \):
+Simplifying and solving for orbital velocity $v$:
 
 \[
 v = \sqrt{\frac{G M}{r}}
@@ -76,6 +76,9 @@ plt.grid(True)
 plt.tight_layout()
 plt.show()
 ```
+![alt text](image.png)
+
+![alt text](image-1.png)
 ### 4. Sample Table of Orbital Parameters
 
 | Orbital Radius (km) | Period (hours) |
@@ -88,14 +91,14 @@ plt.show()
 | 35,786 (GEO)        | 24.0           |
 
 ---
-
+![alt text](image-2.png)
 ### 5. Extension to Elliptical Orbits
 
 Although derived for circular orbits, Kepler's Third Law also applies to elliptical orbits  
 if **r** is replaced with the semi-major axis **a**.
 
 ---
-
+![alt text](image-3.png)
 ### Limitations and Further Exploration
 
 - Assumes two-body problem and ignores perturbations.  
