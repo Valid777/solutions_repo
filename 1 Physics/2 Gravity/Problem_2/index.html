@@ -6,13 +6,13 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../../../img/favicon.ico" rel="shortcut icon"/>
-<title>Problem 2 - Physics and Mathematics</title>
+<title>Escape Velocities and Cosmic Velocities - Physics and Mathematics</title>
 <link href="../../../css/theme.css" rel="stylesheet"/>
 <link href="../../../css/theme_extra.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
 <script>
         // Current page data
-        var mkdocs_page_name = "Problem 2";
+        var mkdocs_page_name = "Escape Velocities and Cosmic Velocities";
         var mkdocs_page_input_path = "1 Physics/2 Gravity/Problem_2.md";
         var mkdocs_page_url = null;
       </script>
@@ -56,8 +56,38 @@
 <ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../Problem_1/">Orbital Period and Orbital Radius</a>
 </li>
-<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 2</a>
+<li class="toctree-l2 current"><a class="reference internal current" href="#">Escape Velocities and Cosmic Velocities</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#1-motivation">1. Motivation</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#2-definitions-and-physical-meaning">2. Definitions and Physical Meaning</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#21-escape-velocity">2.1. Escape Velocity</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#22-first-cosmic-velocity-orbital-velocity">2.2. First Cosmic Velocity (Orbital Velocity)</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#23-second-cosmic-velocity-escape-velocity">2.3. Second Cosmic Velocity (Escape Velocity)</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#24-third-cosmic-velocity-interstellar-velocity">2.4. Third Cosmic Velocity (Interstellar Velocity)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#3-mathematical-derivation-and-parameters">3. Mathematical Derivation and Parameters</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#escape-velocity">Escape Velocity:</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#orbital-velocity">Orbital Velocity:</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#parameters-affecting-the-velocities">Parameters Affecting the Velocities:</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#4-python-simulation-and-visualization">4. Python Simulation and Visualization</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#libraries">Libraries</a>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Problem_3/">Problem 3</a>
@@ -163,7 +193,7 @@
 <li><a aria-label="Docs" class="icon icon-home" href="../../.."></a></li>
 <li class="breadcrumb-item">1 Physics</li>
 <li class="breadcrumb-item">2 Gravity</li>
-<li class="breadcrumb-item active">Problem 2</li>
+<li class="breadcrumb-item active">Escape Velocities and Cosmic Velocities</li>
 <li class="wy-breadcrumbs-aside">
 </li>
 </ul>
@@ -171,146 +201,120 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<p>import numpy as np
-import matplotlib.pyplot as plt
-import os</p>
-<h1 id="create-a-directory-to-save-figures-if-it-doesnt-exist">Create a directory to save figures if it doesn't exist</h1>
-<p>if not os.path.exists("figures"):
-    os.makedirs("figures")</p>
-<h1 id="1-theoretical-foundation-calculate-the-projectile-motion-trajectory">1. Theoretical Foundation: Calculate the projectile motion trajectory</h1>
-<p>def projectile_motion(theta, v0, g=9.81, h0=0):
-    """
-    Calculate the trajectory and range of a projectile.</p>
-<pre><code>Parameters:
-    theta (float): Launch angle in degrees
-    v0 (float): Initial velocity in m/s
-    g (float): Gravitational acceleration in m/s^2 (default: 9.81)
-    h0 (float): Initial height in meters (default: 0)
-
-Returns:
-    range_x (float): Horizontal range in meters
-    x (array): x-coordinates of the trajectory for plotting
-    y (array): y-coordinates of the trajectory for plotting
-"""
-# Convert angle from degrees to radians
-theta_rad = np.radians(theta)
-
-# Calculate the x and y components of the initial velocity
-v0x = v0 * np.cos(theta_rad)
-v0y = v0 * np.sin(theta_rad)
-
-# Calculate the time of flight by solving the quadratic equation for y(t) = 0
-# y(t) = h0 + v0y*t - (1/2)*g*t^2 = 0
-a = -0.5 * g
-b = v0y
-c = h0
-discriminant = b**2 - 4*a*c
-t_flight = (-b + np.sqrt(discriminant)) / (2*a)  # Take the positive root
-
-# Calculate the horizontal range (range_x = v0x * t_flight)
-range_x = v0x * t_flight
-
-# Generate points for the trajectory (x, y coordinates)
-t = np.linspace(0, t_flight, 100)
-x = v0x * t
-y = h0 + v0y * t - 0.5 * g * t**2
-
-return range_x, x, y
-</code></pre>
-<h1 id="2-analysis-plot-the-range-as-a-function-of-the-launch-angle">2. Analysis: Plot the range as a function of the launch angle</h1>
-<p>def analyze_range_vs_angle(v0, g=9.81, h0=0):
-    """
-    Analyze and plot the horizontal range as a function of the launch angle.</p>
-<pre><code>Parameters:
-    v0 (float): Initial velocity in m/s
-    g (float): Gravitational acceleration in m/s^2
-    h0 (float): Initial height in meters
-"""
-# Create an array of angles from 0 to 90 degrees
-angles = np.linspace(0, 90, 91)
-ranges = []
-
-# Calculate the range for each angle
-for theta in angles:
-    range_x, _, _ = projectile_motion(theta, v0, g, h0)
-    ranges.append(range_x)
-
-# Plot the range vs. angle
-plt.figure(figsize=(10, 6))
-plt.plot(angles, ranges, label=f"Initial velocity = {v0} m/s, g = {g} m/s², h0 = {h0} m")
-plt.xlabel("Launch Angle (degrees)")
-plt.ylabel("Horizontal Range (m)")
-plt.title("Horizontal Range vs. Launch Angle")
-plt.grid(True)
-plt.legend()
-plt.savefig("figures/range_vs_angle.png")
-plt.show()
-</code></pre>
-<h1 id="3-visualization-plot-trajectories-for-different-angles">3. Visualization: Plot trajectories for different angles</h1>
-<p>def plot_trajectories(v0, angles, g=9.81, h0=0):
-    """
-    Plot the trajectories of the projectile for different launch angles.</p>
-<pre><code>Parameters:
-    v0 (float): Initial velocity in m/s
-    angles (list): List of launch angles in degrees
-    g (float): Gravitational acceleration in m/s^2
-    h0 (float): Initial height in meters
-"""
-plt.figure(figsize=(10, 6))
-for theta in angles:
-    range_x, x, y = projectile_motion(theta, v0, g, h0)
-    plt.plot(x, y, label=f"Angle = {theta}°")
-
-plt.xlabel("Horizontal Distance (m)")
-plt.ylabel("Height (m)")
-plt.title(f"Projectile Trajectories (Initial velocity = {v0} m/s)")
-plt.grid(True)
-plt.legend()
-plt.savefig("figures/trajectories.png")
-plt.show()
-</code></pre>
-<h1 id="4-comparison-analyze-the-effect-of-different-initial-conditions">4. Comparison: Analyze the effect of different initial conditions</h1>
-<p>def compare_different_conditions():
-    """
-    Compare the range for different initial velocities and heights.
-    """
-    v0_values = [10, 20, 30]  # Different initial velocities
-    h0_values = [0, 10]  # Different initial heights
-    angles = np.linspace(0, 90, 91)  # Angles from 0 to 90 degrees</p>
-<pre><code>plt.figure(figsize=(10, 6))
-for v0 in v0_values:
-    for h0 in h0_values:
-        ranges = []
-        for theta in angles:
-            range_x, _, _ = projectile_motion(theta, v0, g=9.81, h0=h0)
-            ranges.append(range_x)
-        plt.plot(angles, ranges, label=f"v0 = {v0} m/s, h0 = {h0} m")
-
-plt.xlabel("Launch Angle (degrees)")
-plt.ylabel("Horizontal Range (m)")
-plt.title("Range Comparison for Different Initial Conditions")
-plt.grid(True)
-plt.legend()
-plt.savefig("figures/comparison.png")
-plt.show()
-</code></pre>
-<h1 id="main-program">Main program</h1>
-<p>if <strong>name</strong> == "<strong>main</strong>":
-    # Define initial parameters
-    v0 = 20  # Initial velocity in m/s
-    angles = [15, 30, 45, 60, 75]  # List of angles to plot trajectories</p>
-<pre><code># Step 1: Analyze the range as a function of the launch angle
-print("Analyzing the range as a function of the launch angle...")
-analyze_range_vs_angle(v0)
-
-# Step 2: Plot trajectories for different angles
-print("Plotting trajectories for different angles...")
-plot_trajectories(v0, angles)
-
-# Step 3: Compare the effect of different initial conditions
-print("Comparing the effect of different initial conditions...")
-compare_different_conditions()
-</code></pre>
+<h1 id="escape-velocities-and-cosmic-velocities">Escape Velocities and Cosmic Velocities</h1>
+<h2 id="1-motivation">1. Motivation</h2>
+<p>The concept of <strong>escape velocity</strong> is crucial for understanding the conditions required to leave a celestial body's gravitational influence. Extending this concept, the <strong>first, second, and third cosmic velocities</strong> define the thresholds for orbiting, escaping, and leaving a star system. These principles underpin modern space exploration, from launching satellites to interplanetary missions.</p>
+<hr/>
+<h2 id="2-definitions-and-physical-meaning">2. Definitions and Physical Meaning</h2>
+<h3 id="21-escape-velocity">2.1. Escape Velocity</h3>
+<p>Escape velocity is the minimum velocity required for an object to break free from the gravitational field of a celestial body without further propulsion.</p>
+<p>The formula for escape velocity is:</p>
+<div class="arithmatex">\[
+v_{\text{escape}} = \sqrt{\frac{2 G M}{r}}
+\]</div>
+<p>Where:
+- <span class="arithmatex">\( G \)</span> is the gravitational constant,
+- <span class="arithmatex">\( M \)</span> is the mass of the celestial body,
+- <span class="arithmatex">\( r \)</span> is the distance from the center of the body (usually the surface).</p>
+<h3 id="22-first-cosmic-velocity-orbital-velocity">2.2. First Cosmic Velocity (Orbital Velocity)</h3>
+<p>The first cosmic velocity is the minimum velocity needed for an object to achieve a circular orbit around the celestial body.</p>
+<p>The formula for orbital velocity is:</p>
+<div class="arithmatex">\[
+v_1 = \sqrt{\frac{G M}{r}}
+\]</div>
+<p>This velocity allows the object to maintain a stable orbit, balancing the gravitational force with the centripetal force.</p>
+<h3 id="23-second-cosmic-velocity-escape-velocity">2.3. Second Cosmic Velocity (Escape Velocity)</h3>
+<p>The second cosmic velocity is the velocity required to escape the gravitational influence of a celestial body, reaching a trajectory that will take the object away from the system entirely.</p>
+<p>It is the same as the escape velocity:</p>
+<div class="arithmatex">\[
+v_2 = \sqrt{\frac{2 G M}{r}}
+\]</div>
+<h3 id="24-third-cosmic-velocity-interstellar-velocity">2.4. Third Cosmic Velocity (Interstellar Velocity)</h3>
+<p>The third cosmic velocity is the velocity needed to escape the gravitational pull of the entire solar system and travel to interstellar space. It is given by:</p>
+<div class="arithmatex">\[
+v_3 = \sqrt{\frac{2 G M_{\text{sun}}}{r_{\text{sun}}}} + v_{\text{orbital}}
+\]</div>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\(M_{\text{sun}}\)</span> is the mass of the Sun,</li>
+<li><span class="arithmatex">\(r_{\text{sun}}\)</span> is the distance from the Sun,</li>
+<li><span class="arithmatex">\(v_{\text{orbital}}\)</span> is the orbital velocity of the Earth around the Sun.</li>
+</ul>
+<hr/>
+<h2 id="3-mathematical-derivation-and-parameters">3. Mathematical Derivation and Parameters</h2>
+<h3 id="escape-velocity">Escape Velocity:</h3>
+<p>The escape velocity equation is derived from the condition that the <strong>kinetic energy</strong> of an object must be equal to or greater than the <strong>gravitational potential energy</strong>:</p>
+<div class="arithmatex">\[
+\frac{1}{2} mv^2 = \frac{GMm}{r}
+\]</div>
+<p>This simplifies to the escape velocity equation:</p>
+<div class="arithmatex">\[
+v_{\text{escape}} = \sqrt{\frac{2GM}{r}}
+\]</div>
+<h3 id="orbital-velocity">Orbital Velocity:</h3>
+<p>The orbital velocity is derived from equating the centripetal force to the gravitational force:</p>
+<div class="arithmatex">\[
+\frac{mv^2}{r} = \frac{GMm}{r^2}
+\]</div>
+<p>Simplifying gives:</p>
+<div class="arithmatex">\[
+v_{\text{orbital}} = \sqrt{\frac{GM}{r}}
+\]</div>
+<h3 id="parameters-affecting-the-velocities">Parameters Affecting the Velocities:</h3>
+<ul>
+<li>The mass of the central body (e.g., Earth, Mars, Sun) directly impacts the velocities.</li>
+<li>The radius (distance from the center of the body to the object) also affects the velocities. As the object moves further away, the velocities decrease.</li>
+</ul>
+<hr/>
+<h2 id="4-python-simulation-and-visualization">4. Python Simulation and Visualization</h2>
+<h3 id="libraries">Libraries</h3>
+<p>To calculate and visualize these velocities, we will use Python and the <code>numpy</code> and <code>matplotlib</code> libraries.</p>
+<p>```python
+import numpy as np
+import matplotlib.pyplot as plt</p>
+<h1 id="constants">Constants</h1>
+<p>G = 6.67430e-11  # Gravitational constant (m^3 kg^-1 s^-2)</p>
+<h1 id="masses-of-celestial-bodies-kg">Masses of celestial bodies (kg)</h1>
+<p>M_earth = 5.972e24  # Earth mass
+M_mars = 6.4171e23  # Mars mass
+M_jupiter = 1.898e27  # Jupiter mass
+M_sun = 1.989e30  # Sun mass</p>
+<h1 id="radii-of-celestial-bodies-m">Radii of celestial bodies (m)</h1>
+<p>r_earth = 6.371e6  # Earth radius
+r_mars = 3.3962e6  # Mars radius
+r_jupiter = 6.991e7  # Jupiter radius
+r_sun = 6.9634e8  # Sun radius</p>
+<h1 id="function-to-calculate-escape-velocity">Function to calculate escape velocity</h1>
+<p>def escape_velocity(M, r):
+    return np.sqrt(2 * G * M / r)</p>
+<h1 id="function-to-calculate-orbital-velocity-first-cosmic-velocity">Function to calculate orbital velocity (first cosmic velocity)</h1>
+<p>def orbital_velocity(M, r):
+    return np.sqrt(G * M / r)</p>
+<h1 id="calculate-escape-velocities">Calculate escape velocities</h1>
+<p>v_escape_earth = escape_velocity(M_earth, r_earth)
+v_escape_mars = escape_velocity(M_mars, r_mars)
+v_escape_jupiter = escape_velocity(M_jupiter, r_jupiter)
+v_escape_sun = escape_velocity(M_sun, r_sun)</p>
+<h1 id="calculate-orbital-velocities">Calculate orbital velocities</h1>
+<p>v_orbital_earth = orbital_velocity(M_earth, r_earth)
+v_orbital_mars = orbital_velocity(M_mars, r_mars)
+v_orbital_jupiter = orbital_velocity(M_jupiter, r_jupiter)
+v_orbital_sun = orbital_velocity(M_sun, r_sun)</p>
+<h1 id="plotting-the-escape-and-orbital-velocities">Plotting the escape and orbital velocities</h1>
+<p>labels = ['Earth', 'Mars', 'Jupiter', 'Sun']
+escape_velocities = [v_escape_earth, v_escape_mars, v_escape_jupiter, v_escape_sun]
+orbital_velocities = [v_orbital_earth, v_orbital_mars, v_orbital_jupiter, v_orbital_sun]</p>
+<p>x = np.arange(len(labels))</p>
+<p>fig, ax = plt.subplots(figsize=(8, 6))
+ax.bar(x - 0.2, escape_velocities, 0.4, label='Escape Velocity (m/s)')
+ax.bar(x + 0.2, orbital_velocities, 0.4, label='Orbital Velocity (m/s)')</p>
+<p>ax.set_xlabel('Celestial Body')
+ax.set_ylabel('Velocity (m/s)')
+ax.set_title('Escape and Orbital Velocities for Different Celestial Bodies')
+ax.set_xticks(x)
+ax.set_xticklabels(labels)
+ax.legend()</p>
+<p>plt.show()</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
