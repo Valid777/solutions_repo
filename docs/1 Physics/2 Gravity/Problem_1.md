@@ -1,10 +1,10 @@
-# 🌍 Orbital Period and Orbital Radius
+# Orbital Period and Orbital Radius
 
 ---
 
-## 🚀 **Motivation**
+## **Motivation**
 
-Kepler's Third Law — the square of the orbital period is proportional to the cube of the orbital radius — is a foundational principle in celestial mechanics:
+Kepler's Third Law states that the square of the orbital period is proportional to the cube of the orbital radius, and it is a foundational principle in celestial mechanics.
 
 > "The square of the period of a planet is directly proportional to the cube of the semi-major axis of its orbit."
 
@@ -15,7 +15,7 @@ This elegant relationship:
 
 ---
 
-## 🧮 **1. Theoretical Derivation**
+## **1. Theoretical Derivation**
 
 Starting from Newton’s law of universal gravitation and centripetal force:
 
@@ -43,7 +43,7 @@ T^2 \propto r^3
 
 ---
 
-## 🔍 **2. Astronomical Implications**
+## **2. Astronomical Implications**
 
 - Allows determination of planetary masses if radius and period are known.
 - Enables accurate modeling of satellite orbits (e.g., Moon around Earth).
@@ -51,7 +51,7 @@ T^2 \propto r^3
 
 ---
 
-## 💻 **3. Simulation (Python Code)**
+## **3. Simulation (Python Code)**
 
 ```python
 import numpy as np
