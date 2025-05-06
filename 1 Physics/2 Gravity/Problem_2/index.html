@@ -265,52 +265,64 @@ v_{\text{orbital}} = \sqrt{\frac{GM}{r}}
 <h3 id="4-python-simulation-and-visualization">4. Python Simulation and Visualization</h3>
 <p><strong>Libraries</strong><br/>
 To calculate and visualize these velocities, we will use Python and the <code>numpy</code> and <code>matplotlib</code> libraries.</p>
-<p>```python
-import numpy as np
-import matplotlib.pyplot as plt</p>
-<h1 id="constants">Constants</h1>
-<p>G = 6.67430e-11  # Gravitational constant (m^3 kg^-1 s^-2)</p>
-<h1 id="masses-of-celestial-bodies-kg">Masses of celestial bodies (kg)</h1>
-<p>M_earth = 5.972e24     # Earth mass
+<pre><code class="language-python">import numpy as np
+import matplotlib.pyplot as plt
+
+# Constants
+G = 6.67430e-11  # Gravitational constant (m^3 kg^-1 s^-2)
+
+# Masses of celestial bodies (kg)
+M_earth = 5.972e24     # Earth mass
 M_mars = 6.4171e23     # Mars mass
 M_jupiter = 1.898e27   # Jupiter mass
-M_sun = 1.989e30       # Sun mass</p>
-<h1 id="radii-of-celestial-bodies-m">Radii of celestial bodies (m)</h1>
-<p>r_earth = 6.371e6      # Earth radius
+M_sun = 1.989e30       # Sun mass
+
+# Radii of celestial bodies (m)
+r_earth = 6.371e6      # Earth radius
 r_mars = 3.3962e6      # Mars radius
 r_jupiter = 6.991e7    # Jupiter radius
-r_sun = 6.9634e8       # Sun radius</p>
-<h1 id="function-to-calculate-escape-velocity">Function to calculate escape velocity</h1>
-<p>def escape_velocity(M, r):
-    return np.sqrt(2 * G * M / r)</p>
-<h1 id="function-to-calculate-orbital-velocity-first-cosmic-velocity">Function to calculate orbital velocity (first cosmic velocity)</h1>
-<p>def orbital_velocity(M, r):
-    return np.sqrt(G * M / r)</p>
-<h1 id="calculate-escape-velocities">Calculate escape velocities</h1>
-<p>v_escape_earth = escape_velocity(M_earth, r_earth)
+r_sun = 6.9634e8       # Sun radius
+
+# Function to calculate escape velocity
+def escape_velocity(M, r):
+    return np.sqrt(2 * G * M / r)
+
+# Function to calculate orbital velocity (first cosmic velocity)
+def orbital_velocity(M, r):
+    return np.sqrt(G * M / r)
+
+# Calculate escape velocities
+v_escape_earth = escape_velocity(M_earth, r_earth)
 v_escape_mars = escape_velocity(M_mars, r_mars)
 v_escape_jupiter = escape_velocity(M_jupiter, r_jupiter)
-v_escape_sun = escape_velocity(M_sun, r_sun)</p>
-<h1 id="calculate-orbital-velocities">Calculate orbital velocities</h1>
-<p>v_orbital_earth = orbital_velocity(M_earth, r_earth)
+v_escape_sun = escape_velocity(M_sun, r_sun)
+
+# Calculate orbital velocities
+v_orbital_earth = orbital_velocity(M_earth, r_earth)
 v_orbital_mars = orbital_velocity(M_mars, r_mars)
 v_orbital_jupiter = orbital_velocity(M_jupiter, r_jupiter)
-v_orbital_sun = orbital_velocity(M_sun, r_sun)</p>
-<h1 id="plotting-the-escape-and-orbital-velocities">Plotting the escape and orbital velocities</h1>
-<p>labels = ['Earth', 'Mars', 'Jupiter', 'Sun']
+v_orbital_sun = orbital_velocity(M_sun, r_sun)
+
+# Plotting the escape and orbital velocities
+labels = ['Earth', 'Mars', 'Jupiter', 'Sun']
 escape_velocities = [v_escape_earth, v_escape_mars, v_escape_jupiter, v_escape_sun]
-orbital_velocities = [v_orbital_earth, v_orbital_mars, v_orbital_jupiter, v_orbital_sun]</p>
-<p>x = np.arange(len(labels))</p>
-<p>fig, ax = plt.subplots(figsize=(8, 6))
+orbital_velocities = [v_orbital_earth, v_orbital_mars, v_orbital_jupiter, v_orbital_sun]
+
+x = np.arange(len(labels))
+
+fig, ax = plt.subplots(figsize=(8, 6))
 ax.bar(x - 0.2, escape_velocities, 0.4, label='Escape Velocity (m/s)')
-ax.bar(x + 0.2, orbital_velocities, 0.4, label='Orbital Velocity (m/s)')</p>
-<p>ax.set_xlabel('Celestial Body')
+ax.bar(x + 0.2, orbital_velocities, 0.4, label='Orbital Velocity (m/s)')
+
+ax.set_xlabel('Celestial Body')
 ax.set_ylabel('Velocity (m/s)')
 ax.set_title('Escape and Orbital Velocities for Different Celestial Bodies')
 ax.set_xticks(x)
 ax.set_xticklabels(labels)
-ax.legend()</p>
-<p>plt.show()</p>
+ax.legend()
+
+plt.show()
+</code></pre>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
