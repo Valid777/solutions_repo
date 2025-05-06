@@ -76,4 +76,37 @@ plt.grid(True)
 plt.tight_layout()
 plt.show()
 ```
+### 4. Sample Table of Orbital Parameters
+
+| Orbital Radius (km) | Period (hours) |
+|---------------------|----------------|
+| 7,000               | 1.6            |
+| 10,000              | 2.8            |
+| 15,000              | 5.2            |
+| 20,000              | 8.2            |
+| 26,600 (GPS)        | 12.0           |
+| 35,786 (GEO)        | 24.0           |
+
+---
+
+### 5. Extension to Elliptical Orbits
+
+Although derived for circular orbits, Kepler's Third Law also applies to elliptical orbits  
+if *r* is replaced with the semi-major axis *a*.
+
+---
+
+### Limitations and Further Exploration
+
+- Assumes two-body problem and ignores perturbations.  
+- Doesn’t consider relativistic corrections (important near massive bodies).  
+- Future extensions: elliptical orbits, n-body systems, or relativistic gravity.
+
+---
+
+### References
+
+- Newton’s *Principia Mathematica*  
+- Kepler’s Laws of Planetary Motion  
+- NASA Orbital Mechanics Tutorials  
 
