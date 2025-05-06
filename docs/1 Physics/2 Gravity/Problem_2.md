@@ -161,6 +161,8 @@ ax.legend()
 
 plt.show()
 ```
+![alt text](image-4.png)
+![alt text](image-6.png)
 ## 5. Discussion
 
 The escape and orbital velocities are key in space exploration. Understanding these velocities helps to plan satellite launches, interplanetary missions, and even potential interstellar travel. 
@@ -168,6 +170,8 @@ The escape and orbital velocities are key in space exploration. Understanding th
 - The **first cosmic velocity** determines the speed necessary to maintain a stable orbit around a celestial body.
 - The **second cosmic velocity** is required to break free from the body's gravitational influence.
 - The **third cosmic velocity** is important for escaping the solar system and traveling into interstellar space.
+
+![alt text](image-5.png)
 
 ### Importance in Space Exploration
 
