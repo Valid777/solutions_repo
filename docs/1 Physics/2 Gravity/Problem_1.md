@@ -9,6 +9,7 @@ Kepler's Third Law states that the square of the orbital period is proportional 
 > "The square of the period of a planet is directly proportional to the cube of the semi-major axis of its orbit."
 
 This elegant relationship:
+
 - Helps calculate planetary distances and masses,
 - Enables satellite and orbital dynamics modeling,
 - Links Newtonian gravity with astronomical observations.
