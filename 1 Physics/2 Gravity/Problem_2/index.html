@@ -80,11 +80,7 @@
 </li>
 <li class="toctree-l4"><a class="reference internal" href="#parameters-affecting-the-velocities">Parameters Affecting the Velocities:</a>
 </li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#4-python-simulation-and-visualization">4. Python Simulation and Visualization</a>
-<ul>
-<li class="toctree-l4"><a class="reference internal" href="#libraries">Libraries</a>
+<li class="toctree-l4"><a class="reference internal" href="#4-python-simulation-and-visualization">4. Python Simulation and Visualization</a>
 </li>
 </ul>
 </li>
@@ -266,24 +262,24 @@ v_{\text{orbital}} = \sqrt{\frac{GM}{r}}
 <li>The radius (distance from the center of the body to the object) also affects the velocities. As the object moves further away, the velocities decrease.</li>
 </ul>
 <hr/>
-<h2 id="4-python-simulation-and-visualization">4. Python Simulation and Visualization</h2>
-<h3 id="libraries">Libraries</h3>
-<p>To calculate and visualize these velocities, we will use Python and the <code>numpy</code> and <code>matplotlib</code> libraries.</p>
+<h3 id="4-python-simulation-and-visualization">4. Python Simulation and Visualization</h3>
+<p><strong>Libraries</strong><br/>
+To calculate and visualize these velocities, we will use Python and the <code>numpy</code> and <code>matplotlib</code> libraries.</p>
 <p>```python
 import numpy as np
 import matplotlib.pyplot as plt</p>
 <h1 id="constants">Constants</h1>
 <p>G = 6.67430e-11  # Gravitational constant (m^3 kg^-1 s^-2)</p>
 <h1 id="masses-of-celestial-bodies-kg">Masses of celestial bodies (kg)</h1>
-<p>M_earth = 5.972e24  # Earth mass
-M_mars = 6.4171e23  # Mars mass
-M_jupiter = 1.898e27  # Jupiter mass
-M_sun = 1.989e30  # Sun mass</p>
+<p>M_earth = 5.972e24     # Earth mass
+M_mars = 6.4171e23     # Mars mass
+M_jupiter = 1.898e27   # Jupiter mass
+M_sun = 1.989e30       # Sun mass</p>
 <h1 id="radii-of-celestial-bodies-m">Radii of celestial bodies (m)</h1>
-<p>r_earth = 6.371e6  # Earth radius
-r_mars = 3.3962e6  # Mars radius
-r_jupiter = 6.991e7  # Jupiter radius
-r_sun = 6.9634e8  # Sun radius</p>
+<p>r_earth = 6.371e6      # Earth radius
+r_mars = 3.3962e6      # Mars radius
+r_jupiter = 6.991e7    # Jupiter radius
+r_sun = 6.9634e8       # Sun radius</p>
 <h1 id="function-to-calculate-escape-velocity">Function to calculate escape velocity</h1>
 <p>def escape_velocity(M, r):
     return np.sqrt(2 * G * M / r)</p>
