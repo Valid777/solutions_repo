@@ -92,7 +92,7 @@ plt.show()
 ### 5. Extension to Elliptical Orbits
 
 Although derived for circular orbits, Kepler's Third Law also applies to elliptical orbits  
-if $r$ is replaced with the semi-major axis $a$.
+if **r** is replaced with the semi-major axis **a**.
 
 ---
 
@@ -106,7 +106,7 @@ if $r$ is replaced with the semi-major axis $a$.
 
 ### References
 
-- Newton’s $Principia Mathematica$ 
+- Newton’s **Principia Mathematica** 
 - Kepler’s Laws of Planetary Motion  
 - NASA Orbital Mechanics Tutorials  
 
