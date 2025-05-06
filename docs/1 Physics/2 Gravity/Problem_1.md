@@ -52,14 +52,14 @@ T^2 \propto r^3
 
 ---
 
-## **3. Simulation (Python Code)**
+### 3. Simulation (Python Code)
 
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
 
 # Constants
-G = 6.67430e-11  # m^3/kg/s^2
+G = 6.67430e-11  # gravitational constant (m^3/kg/s^2)
 M = 5.972e24     # mass of Earth in kg
 
 # Radii in meters (example: Low Earth Orbit to Geostationary)
@@ -69,9 +69,11 @@ periods = 2 * np.pi * np.sqrt(radii**3 / (G * M))
 # Plotting
 plt.figure(figsize=(8, 5))
 plt.plot(radii / 1e6, periods / 3600, color='royalblue')
-plt.xlabel('Orbital Radius (x10⁶ m)')
+plt.xlabel('Orbital Radius (×10⁶ m)')
 plt.ylabel('Orbital Period (hours)')
-plt.title('Kepler’s Third Law: $T^2 \\propto r^3$')
+plt.title("Kepler’s Third Law: Orbital Period vs Radius")
 plt.grid(True)
 plt.tight_layout()
 plt.show()
+```
+
