@@ -6,13 +6,13 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../../../img/favicon.ico" rel="shortcut icon"/>
-<title>Problem 1 - Physics and Mathematics</title>
+<title>🌍 Orbital Period and Orbital Radius - Physics and Mathematics</title>
 <link href="../../../css/theme.css" rel="stylesheet"/>
 <link href="../../../css/theme_extra.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
 <script>
         // Current page data
-        var mkdocs_page_name = "Problem 1";
+        var mkdocs_page_name = "\ud83c\udf0d Orbital Period and Orbital Radius";
         var mkdocs_page_input_path = "1 Physics/2 Gravity/Problem_1.md";
         var mkdocs_page_url = null;
       </script>
@@ -54,8 +54,16 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal current">2 Gravity</a>
 <ul class="current">
-<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
+<li class="toctree-l2 current"><a class="reference internal current" href="#">🌍 Orbital Period and Orbital Radius</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#motivation">🚀 Motivation</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#1-theoretical-derivation">🧮 1. Theoretical Derivation</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#2-astronomical-implications">🔍 2. Astronomical Implications</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#3-simulation-python-code">💻 3. Simulation (Python Code)</a>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Problem_2/">Problem 2</a>
@@ -163,7 +171,7 @@
 <li><a aria-label="Docs" class="icon icon-home" href="../../.."></a></li>
 <li class="breadcrumb-item">1 Physics</li>
 <li class="breadcrumb-item">2 Gravity</li>
-<li class="breadcrumb-item active">Problem 1</li>
+<li class="breadcrumb-item active">🌍 Orbital Period and Orbital Radius</li>
 <li class="wy-breadcrumbs-aside">
 </li>
 </ul>
@@ -171,7 +179,62 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="problem-1">Problem 1</h1>
+<h1 id="orbital-period-and-orbital-radius">🌍 Orbital Period and Orbital Radius</h1>
+<hr/>
+<h2 id="motivation">🚀 <strong>Motivation</strong></h2>
+<p>Kepler's Third Law — the square of the orbital period is proportional to the cube of the orbital radius — is a foundational principle in celestial mechanics:</p>
+<blockquote>
+<p>"The square of the period of a planet is directly proportional to the cube of the semi-major axis of its orbit."</p>
+</blockquote>
+<p>This elegant relationship:
+- Helps calculate planetary distances and masses,
+- Enables satellite and orbital dynamics modeling,
+- Links Newtonian gravity with astronomical observations.</p>
+<hr/>
+<h2 id="1-theoretical-derivation">🧮 <strong>1. Theoretical Derivation</strong></h2>
+<p>Starting from Newton’s law of universal gravitation and centripetal force:</p>
+<div class="arithmatex">\[
+F_{\text{gravity}} = F_{\text{centripetal}} \Rightarrow \frac{G M m}{r^2} = \frac{m v^2}{r}
+\]</div>
+<p>Simplifying and solving for orbital velocity <span class="arithmatex">\( v \)</span>:</p>
+<div class="arithmatex">\[
+v = \sqrt{\frac{G M}{r}}
+\]</div>
+<p>Now, using <span class="arithmatex">\( v = \frac{2\pi r}{T} \)</span>:</p>
+<div class="arithmatex">\[
+\frac{2\pi r}{T} = \sqrt{\frac{G M}{r}} \Rightarrow T^2 = \frac{4\pi^2}{G M} r^3
+\]</div>
+<p>Thus proving:</p>
+<div class="arithmatex">\[
+T^2 \propto r^3
+\]</div>
+<hr/>
+<h2 id="2-astronomical-implications">🔍 <strong>2. Astronomical Implications</strong></h2>
+<ul>
+<li>Allows determination of planetary masses if radius and period are known.</li>
+<li>Enables accurate modeling of satellite orbits (e.g., Moon around Earth).</li>
+<li>Used in planning satellite launches and interplanetary missions.</li>
+</ul>
+<hr/>
+<h2 id="3-simulation-python-code">💻 <strong>3. Simulation (Python Code)</strong></h2>
+<p>```python
+import numpy as np
+import matplotlib.pyplot as plt</p>
+<h1 id="constants">Constants</h1>
+<p>G = 6.67430e-11  # m^3/kg/s^2
+M = 5.972e24     # mass of Earth in kg</p>
+<h1 id="radii-in-meters-example-low-earth-orbit-to-geostationary">Radii in meters (example: Low Earth Orbit to Geostationary)</h1>
+<p>radii = np.linspace(7e6, 4.2e7, 100)
+periods = 2 * np.pi * np.sqrt(radii**3 / (G * M))</p>
+<h1 id="plotting">Plotting</h1>
+<p>plt.figure(figsize=(8, 5))
+plt.plot(radii / 1e6, periods / 3600, color='royalblue')
+plt.xlabel('Orbital Radius (x10⁶ m)')
+plt.ylabel('Orbital Period (hours)')
+plt.title('Kepler’s Third Law: <span class="arithmatex">\(T^2 \\propto r^3\)</span>')
+plt.grid(True)
+plt.tight_layout()
+plt.show()</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
