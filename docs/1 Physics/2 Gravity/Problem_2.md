@@ -160,3 +160,4 @@ ax.set_xticklabels(labels)
 ax.legend()
 
 plt.show()
+```
