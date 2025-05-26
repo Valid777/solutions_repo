@@ -6,13 +6,13 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../../../img/favicon.ico" rel="shortcut icon"/>
-<title>Problem 3 - Physics and Mathematics</title>
+<title>🛰️ Problem 3: Trajectories of a Freely Released Payload Near Earth - Physics and Mathematics</title>
 <link href="../../../css/theme.css" rel="stylesheet"/>
 <link href="../../../css/theme_extra.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
 <script>
         // Current page data
-        var mkdocs_page_name = "Problem 3";
+        var mkdocs_page_name = "\ud83d\udef0\ufe0f Problem 3: Trajectories of a Freely Released Payload Near Earth";
         var mkdocs_page_input_path = "1 Physics/2 Gravity/Problem_3.md";
         var mkdocs_page_url = null;
       </script>
@@ -58,8 +58,34 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Problem_2/">Escape Velocities and Cosmic Velocities</a>
 </li>
-<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 3</a>
+<li class="toctree-l2 current"><a class="reference internal current" href="#">🛰️ Problem 3: Trajectories of a Freely Released Payload Near Earth</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#motivation">🚀 Motivation</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#task-overview">🎯 Task Overview</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#1-analyze-possible-trajectories">1. Analyze Possible Trajectories</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#2-numerical-simulation">2. Numerical Simulation</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#3-applications">3. Applications</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#theoretical-background">📐 Theoretical Background</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#newtons-law-of-gravitation">Newton’s Law of Gravitation:</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#newtons-second-law">Newton’s Second Law:</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#simulation-plan">🧮 Simulation Plan</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#deliverables">📦 Deliverables</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#notes-considerations">📌 Notes &amp; Considerations</a>
+</li>
 </ul>
 </li>
 </ul>
@@ -163,7 +189,7 @@
 <li><a aria-label="Docs" class="icon icon-home" href="../../.."></a></li>
 <li class="breadcrumb-item">1 Physics</li>
 <li class="breadcrumb-item">2 Gravity</li>
-<li class="breadcrumb-item active">Problem 3</li>
+<li class="breadcrumb-item active">🛰️ Problem 3: Trajectories of a Freely Released Payload Near Earth</li>
 <li class="wy-breadcrumbs-aside">
 </li>
 </ul>
@@ -171,7 +197,85 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="problem-3">Problem 3</h1>
+<h1 id="problem-3-trajectories-of-a-freely-released-payload-near-earth">🛰️ Problem 3: Trajectories of a Freely Released Payload Near Earth</h1>
+<h2 id="motivation">🚀 Motivation</h2>
+<p>When an object is released from a moving rocket near Earth, its trajectory is influenced by both the initial velocity and Earth's gravitational pull. This problem blends the concepts of <strong>orbital mechanics</strong> and <strong>numerical simulations</strong>. Understanding such motion is crucial for:</p>
+<ul>
+<li>Deploying payloads into orbit</li>
+<li>Reentry maneuvers</li>
+<li>Planning escape missions from Earth’s gravity</li>
+</ul>
+<hr/>
+<h2 id="task-overview">🎯 Task Overview</h2>
+<h3 id="1-analyze-possible-trajectories">1. <strong>Analyze Possible Trajectories</strong></h3>
+<ul>
+<li><strong>Elliptical orbit</strong>: If the object’s speed is below escape velocity and properly directed.</li>
+<li><strong>Parabolic path</strong>: When velocity equals escape velocity.</li>
+<li><strong>Hyperbolic escape</strong>: If speed exceeds escape velocity.</li>
+<li><strong>Sub-orbital</strong>: If speed is insufficient to maintain orbit (returns to Earth).</li>
+</ul>
+<h3 id="2-numerical-simulation">2. <strong>Numerical Simulation</strong></h3>
+<ul>
+<li>Simulate payload motion with varying:</li>
+<li>Initial velocities</li>
+<li>Launch directions</li>
+<li>Altitudes</li>
+<li>Implement Newton’s Law of Gravitation to calculate acceleration and path.</li>
+</ul>
+<h3 id="3-applications">3. <strong>Applications</strong></h3>
+<ul>
+<li>Orbital insertion (e.g., satellites)</li>
+<li>Safe reentry paths</li>
+<li>Mission planning for interplanetary travel</li>
+</ul>
+<hr/>
+<h2 id="theoretical-background">📐 Theoretical Background</h2>
+<h3 id="newtons-law-of-gravitation">Newton’s Law of Gravitation:</h3>
+<div class="arithmatex">\[
+F = G \frac{M m}{r^2}
+\]</div>
+<h3 id="newtons-second-law">Newton’s Second Law:</h3>
+<div class="arithmatex">\[
+F = m a \Rightarrow a = \frac{F}{m}
+\]</div>
+<p>Combined:
+[
+\vec{a} = - \frac{GM}{r^2} \hat{r}
+]</p>
+<p>Where:
+- <span class="arithmatex">\( G = 6.67430 \times 10^{-11} \, \text{m}^3/\text{kg}/\text{s}^2 \)</span>
+- <span class="arithmatex">\( M = 5.972 \times 10^{24} \, \text{kg} \)</span> (Earth’s mass)
+- <span class="arithmatex">\( r \)</span> is the distance from Earth’s center to the payload</p>
+<hr/>
+<h2 id="simulation-plan">🧮 Simulation Plan</h2>
+<ul>
+<li><strong>Step 1</strong>: Define gravitational parameters and initial conditions</li>
+<li><strong>Step 2</strong>: Implement time integration (e.g., Euler or RK4)</li>
+<li><strong>Step 3</strong>: Plot trajectories for:</li>
+<li>Sub-orbital speed</li>
+<li>Circular orbital speed</li>
+<li>Escape velocity</li>
+<li>Hyperbolic (greater than escape) speed</li>
+</ul>
+<hr/>
+<h2 id="deliverables">📦 Deliverables</h2>
+<ul>
+<li>✅ Python simulation code in Colab</li>
+<li>✅ Visual comparison of different trajectories</li>
+<li>✅ Explanation of each motion case</li>
+<li>✅ Discussion on how results relate to real-world applications</li>
+</ul>
+<hr/>
+<h2 id="notes-considerations">📌 Notes &amp; Considerations</h2>
+<ul>
+<li>Simulations assume <strong>2D plane</strong> and <strong>point-mass gravity</strong>.</li>
+<li>Atmospheric drag and Earth’s rotation are ignored in the first version.</li>
+<li>Future extensions:</li>
+<li>Include atmospheric resistance</li>
+<li>Model reentry heating effects</li>
+<li>Consider n-body scenarios</li>
+</ul>
+<hr/>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
