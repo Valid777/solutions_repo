@@ -6,13 +6,13 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../../../img/favicon.ico" rel="shortcut icon"/>
-<title>Problem 1 - Physics and Mathematics</title>
+<title>🌊 Problem 1: Interference Patterns on a Water Surface - Physics and Mathematics</title>
 <link href="../../../css/theme.css" rel="stylesheet"/>
 <link href="../../../css/theme_extra.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
 <script>
         // Current page data
-        var mkdocs_page_name = "Problem 1";
+        var mkdocs_page_name = "\ud83c\udf0a Problem 1: Interference Patterns on a Water Surface";
         var mkdocs_page_input_path = "1 Physics/3 Waves/Problem_1.md";
         var mkdocs_page_url = null;
       </script>
@@ -64,8 +64,36 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal current">3 Waves</a>
 <ul class="current">
-<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
+<li class="toctree-l2 current"><a class="reference internal current" href="#">🌊 Problem 1: Interference Patterns on a Water Surface</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#motivation">📘 Motivation</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#task-overview">🎯 Task Overview</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#wave-equation">🧮 Wave Equation</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#steps-to-follow">🧭 Steps to Follow</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#1-choose-a-regular-polygon">1. Choose a Regular Polygon</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#2-position-wave-sources">2. Position Wave Sources</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#3-define-wave-equations">3. Define Wave Equations</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#4-apply-superposition-principle">4. Apply Superposition Principle</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#5-visualize-interference-pattern">5. Visualize Interference Pattern</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#6-analyze-constructive-destructive-interference">6. Analyze Constructive &amp; Destructive Interference</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#assumptions">💡 Assumptions</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#deliverables">📦 Deliverables</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#notes">📌 Notes</a>
+</li>
 </ul>
 </li>
 </ul>
@@ -163,7 +191,7 @@
 <li><a aria-label="Docs" class="icon icon-home" href="../../.."></a></li>
 <li class="breadcrumb-item">1 Physics</li>
 <li class="breadcrumb-item">3 Waves</li>
-<li class="breadcrumb-item active">Problem 1</li>
+<li class="breadcrumb-item active">🌊 Problem 1: Interference Patterns on a Water Surface</li>
 <li class="wy-breadcrumbs-aside">
 </li>
 </ul>
@@ -171,7 +199,79 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="problem-1">Problem 1</h1>
+<h1 id="problem-1-interference-patterns-on-a-water-surface">🌊 Problem 1: Interference Patterns on a Water Surface</h1>
+<h2 id="motivation">📘 Motivation</h2>
+<p>Interference occurs when waves from different sources overlap, creating new patterns. On a water surface, this can be clearly observed when ripples from multiple point sources meet. These patterns illustrate:</p>
+<ul>
+<li><strong>Constructive interference</strong>: where waves reinforce each other</li>
+<li><strong>Destructive interference</strong>: where waves cancel out</li>
+</ul>
+<p>This task helps us understand wave behavior visually and builds intuition for concepts such as phase, coherence, and superposition.</p>
+<hr/>
+<h2 id="task-overview">🎯 Task Overview</h2>
+<p>You will simulate and analyze <strong>interference patterns</strong> created by waves emitted from <strong>point sources located at the vertices of a regular polygon</strong>.</p>
+<hr/>
+<h2 id="wave-equation">🧮 Wave Equation</h2>
+<p>The wave from a single source at location <span class="arithmatex">\(\vec{r}_i\)</span> is given by:</p>
+<div class="arithmatex">\[
+\psi_i(\vec{r}, t) = A \cdot \cos\left(k |\vec{r} - \vec{r}_i| - \omega t + \phi\right)
+\]</div>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\(\psi_i\)</span>: displacement at point <span class="arithmatex">\(\vec{r}\)</span> and time <span class="arithmatex">\(t\)</span></li>
+<li><span class="arithmatex">\(A\)</span>: amplitude</li>
+<li><span class="arithmatex">\(k = \frac{2\pi}{\lambda}\)</span>: wave number</li>
+<li><span class="arithmatex">\(\omega = 2\pi f\)</span>: angular frequency</li>
+<li><span class="arithmatex">\(|\vec{r} - \vec{r}_i|\)</span>: distance from source to point</li>
+<li><span class="arithmatex">\(\phi\)</span>: initial phase</li>
+</ul>
+<hr/>
+<h2 id="steps-to-follow">🧭 Steps to Follow</h2>
+<h3 id="1-choose-a-regular-polygon">1. <strong>Choose a Regular Polygon</strong></h3>
+<ul>
+<li>Triangle, square, pentagon, etc.</li>
+</ul>
+<h3 id="2-position-wave-sources">2. <strong>Position Wave Sources</strong></h3>
+<ul>
+<li>Place point sources at the vertices of the polygon.</li>
+</ul>
+<h3 id="3-define-wave-equations">3. <strong>Define Wave Equations</strong></h3>
+<ul>
+<li>Use the wave formula for each source based on its position.</li>
+</ul>
+<h3 id="4-apply-superposition-principle">4. <strong>Apply Superposition Principle</strong></h3>
+<div class="arithmatex">\[
+\Psi(\vec{r}, t) = \sum_{i=1}^{N} \psi_i(\vec{r}, t)
+\]</div>
+<h3 id="5-visualize-interference-pattern">5. <strong>Visualize Interference Pattern</strong></h3>
+<ul>
+<li>Plot surface displacement across a 2D grid.</li>
+</ul>
+<h3 id="6-analyze-constructive-destructive-interference">6. <strong>Analyze Constructive &amp; Destructive Interference</strong></h3>
+<ul>
+<li>Observe and explain bright (amplified) and dark (cancelled) regions.</li>
+</ul>
+<hr/>
+<h2 id="assumptions">💡 Assumptions</h2>
+<ul>
+<li>All waves are <strong>coherent</strong> (same frequency, amplitude, phase relationship).</li>
+<li>Waves propagate on a <strong>flat 2D plane</strong>.</li>
+<li>Medium is <strong>uniform and lossless</strong>.</li>
+</ul>
+<hr/>
+<h2 id="deliverables">📦 Deliverables</h2>
+<ul>
+<li>✅ Python notebook (e.g., in Google Colab) with simulation code</li>
+<li>✅ Graphical representations of the interference pattern</li>
+<li>✅ Explanation of the physical phenomena observed</li>
+<li>✅ Discussion of phase, geometry, and interference effects</li>
+</ul>
+<hr/>
+<h2 id="notes">📌 Notes</h2>
+<ul>
+<li>Increasing the number of sources (polygon vertices) leads to more complex interference.</li>
+<li>You can later test with varying phase offsets or frequencies for deeper analysis.</li>
+</ul>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
