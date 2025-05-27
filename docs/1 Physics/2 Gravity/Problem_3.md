@@ -13,12 +13,15 @@ When an object is released from a moving rocket near Earth, its trajectory is in
 ## 🎯 Task Overview
 
 ### 1. **Analyze Possible Trajectories**
+![alt text](image-7.png)
+![alt text](image-9.png)
 - **Elliptical orbit**: If the object’s speed is below escape velocity and properly directed.
 - **Parabolic path**: When velocity equals escape velocity.
 - **Hyperbolic escape**: If speed exceeds escape velocity.
 - **Sub-orbital**: If speed is insufficient to maintain orbit (returns to Earth).
 
 ### 2. **Numerical Simulation**
+![alt text](image-8.png)
 - Simulate payload motion with varying:
   - Initial velocities
   - Launch directions
@@ -33,7 +36,7 @@ When an object is released from a moving rocket near Earth, its trajectory is in
 ---
 
 ## 📐 Theoretical Background
-
+![alt text](image-12.png)
 ### Newton’s Law of Gravitation:
 \[
 F = G \frac{M m}{r^2}
@@ -66,6 +69,7 @@ Where:
   - Escape velocity
   - Hyperbolic (greater than escape) speed
 
+![alt text](image-10.png)
 ---
 
 ## 📦 Deliverables
