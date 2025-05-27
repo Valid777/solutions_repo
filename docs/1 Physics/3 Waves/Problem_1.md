@@ -24,7 +24,7 @@ The wave from a single source at location $\vec{r}_i$ is given by:
 $$
 \psi_i(\vec{r}, t) = A \cdot \cos\left(k |\vec{r} - \vec{r}_i| - \omega t + \phi\right)
 $$
-
+![alt text](image.png)
 Where:
 
 - $\psi_i$: displacement at point $\vec{r}$ and time $t$
@@ -44,6 +44,8 @@ Where:
 ### 2. **Position Wave Sources**
 - Place point sources at the vertices of the polygon.
 
+![alt text](image-2.png)
+
 ### 3. **Define Wave Equations**
 - Use the wave formula for each source based on its position.
 
@@ -51,11 +53,16 @@ Where:
 $$
 \Psi(\vec{r}, t) = \sum_{i=1}^{N} \psi_i(\vec{r}, t)
 $$
+![alt text](image-1.png)
 ### 5. **Visualize Interference Pattern**
 - Plot surface displacement across a 2D grid.
 
+![alt text](image-4.png)
+
 ### 6. **Analyze Constructive & Destructive Interference**
 - Observe and explain bright (amplified) and dark (cancelled) regions.
+
+![alt text](image-5.png)
 
 ---
 
