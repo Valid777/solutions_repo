@@ -49,9 +49,11 @@ F = m a \Rightarrow a = \frac{F}{m}
 \]
 
 Combined:
-\[
+Combined:
+$$
 \vec{a} = - \frac{GM}{r^2} \hat{r}
-\]
+$$
+
 
 Where:
 - \( G = 6.67430 \times 10^{-11} \, \text{m}^3/\text{kg}/\text{s}^2 \)
