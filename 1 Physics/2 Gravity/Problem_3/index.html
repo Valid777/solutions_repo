@@ -82,6 +82,8 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#simulation-plan">🧮 Simulation Plan</a>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#_1"></a>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#deliverables">📦 Deliverables</a>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#notes-considerations">📌 Notes &amp; Considerations</a>
@@ -208,20 +210,19 @@
 <hr/>
 <h2 id="task-overview">🎯 Task Overview</h2>
 <h3 id="1-analyze-possible-trajectories">1. <strong>Analyze Possible Trajectories</strong></h3>
-<ul>
-<li><strong>Elliptical orbit</strong>: If the object’s speed is below escape velocity and properly directed.</li>
-<li><strong>Parabolic path</strong>: When velocity equals escape velocity.</li>
-<li><strong>Hyperbolic escape</strong>: If speed exceeds escape velocity.</li>
-<li><strong>Sub-orbital</strong>: If speed is insufficient to maintain orbit (returns to Earth).</li>
-</ul>
+<p><img alt="alt text" src="../image-7.png"/>
+<img alt="alt text" src="../image-9.png"/>
+- <strong>Elliptical orbit</strong>: If the object’s speed is below escape velocity and properly directed.
+- <strong>Parabolic path</strong>: When velocity equals escape velocity.
+- <strong>Hyperbolic escape</strong>: If speed exceeds escape velocity.
+- <strong>Sub-orbital</strong>: If speed is insufficient to maintain orbit (returns to Earth).</p>
 <h3 id="2-numerical-simulation">2. <strong>Numerical Simulation</strong></h3>
-<ul>
-<li>Simulate payload motion with varying:</li>
-<li>Initial velocities</li>
-<li>Launch directions</li>
-<li>Altitudes</li>
-<li>Implement Newton’s Law of Gravitation to calculate acceleration and path.</li>
-</ul>
+<p><img alt="alt text" src="../image-8.png"/>
+- Simulate payload motion with varying:
+  - Initial velocities
+  - Launch directions
+  - Altitudes
+- Implement Newton’s Law of Gravitation to calculate acceleration and path.</p>
 <h3 id="3-applications">3. <strong>Applications</strong></h3>
 <ul>
 <li>Orbital insertion (e.g., satellites)</li>
@@ -230,6 +231,7 @@
 </ul>
 <hr/>
 <h2 id="theoretical-background">📐 Theoretical Background</h2>
+<p><img alt="alt text" src="../image-12.png"/></p>
 <h3 id="newtons-law-of-gravitation">Newton’s Law of Gravitation:</h3>
 <div class="arithmatex">\[
 F = G \frac{M m}{r^2}
@@ -257,7 +259,7 @@ F = m a \Rightarrow a = \frac{F}{m}
 <li>Escape velocity</li>
 <li>Hyperbolic (greater than escape) speed</li>
 </ul>
-<hr/>
+<h2 id="_1"><img alt="alt text" src="../image-10.png"/></h2>
 <h2 id="deliverables">📦 Deliverables</h2>
 <ul>
 <li>✅ Python simulation code in Colab</li>
