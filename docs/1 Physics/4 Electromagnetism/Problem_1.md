@@ -1,7 +1,3 @@
-Əla! Aşağıda bu problemi **nümunəyə uyğun olaraq Markdown formatında** tam strukturu ilə təqdim edirəm. Bu sənəd həm nəzəri hissəni, həm də simulyasiyaya dair istiqamətləri və Python kodunun inteqrasiyasını özündə cəmləyir:
-
----
-
 # 🧲 Problem 1: Simulating the Effects of the Lorentz Force
 
 ## 📘 Motivation
@@ -72,6 +68,7 @@ r0 = np.array([0, 0, 0]) # Initial position
 dt = 0.01
 steps = 1000
 ```
+![alt text](image-1.png)
 
 ### 🔁 Euler Integration
 
@@ -114,6 +111,8 @@ plt.show()
 > * **Helical motion** (magnetic field + velocity at an angle)
 > * **Drift motion** (crossed E and B fields)
 
+![alt text](image.png)
+
 ---
 
 ## 🎛️ Step 5: Parameter Exploration
@@ -144,7 +143,7 @@ Observe:
   $$
   \vec{v}_d = \frac{\vec{E} \times \vec{B}}{B^2}
   $$
-
+![alt text](image-2.png)
 ---
 
 ## 📦 Deliverables
