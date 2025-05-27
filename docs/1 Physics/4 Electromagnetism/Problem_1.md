@@ -173,10 +173,11 @@ Observe:
 
 ---
 
-## 🛠️ Notes & Tips
+## 🛠️ Notes & Tips:
 
 * Use `scipy.integrate.solve_ivp()` for more accurate RK4 solutions.
 * Visualize velocity and acceleration vectors for better insight.
 * Adjust timestep `dt` to ensure numerical stability.
 
 ---
+
