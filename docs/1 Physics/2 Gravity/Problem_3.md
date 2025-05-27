@@ -49,7 +49,6 @@ F = m a \Rightarrow a = \frac{F}{m}
 \]
 
 Combined:
-Combined:
 $$
 \vec{a} = - \frac{GM}{r^2} \hat{r}
 $$
