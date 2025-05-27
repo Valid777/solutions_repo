@@ -15,6 +15,7 @@ When an object is released from a moving rocket near Earth, its trajectory is in
 ### 1. **Analyze Possible Trajectories**
 ![alt text](image-7.png)
 ![alt text](image-9.png)
+![alt text](image-4.png)
 - **Elliptical orbit**: If the object’s speed is below escape velocity and properly directed.
 - **Parabolic path**: When velocity equals escape velocity.
 - **Hyperbolic escape**: If speed exceeds escape velocity.
