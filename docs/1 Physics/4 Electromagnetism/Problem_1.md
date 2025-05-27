@@ -68,7 +68,8 @@ r0 = np.array([0, 0, 0]) # Initial position
 dt = 0.01
 steps = 1000
 ```
-![alt text](image-1.png)
+![alt text](image-3.png)
+
 
 ### 🔁 Euler Integration
 
@@ -111,7 +112,7 @@ plt.show()
 > * **Helical motion** (magnetic field + velocity at an angle)
 > * **Drift motion** (crossed E and B fields)
 
-![alt text](image.png)
+![alt text](image-5.png)
 
 ---
 
@@ -143,7 +144,7 @@ Observe:
   $$
   \vec{v}_d = \frac{\vec{E} \times \vec{B}}{B^2}
   $$
-![alt text](image-2.png)
+![alt text](image-4.png)
 ---
 
 ## 📦 Deliverables
