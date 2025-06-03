@@ -6,13 +6,13 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../../../img/favicon.ico" rel="shortcut icon"/>
-<title>Problem 1 - Physics and Mathematics</title>
+<title>Problem 1: Measuring Earth's Gravitational Acceleration with a Pendulum - Physics and Mathematics</title>
 <link href="../../../css/theme.css" rel="stylesheet"/>
 <link href="../../../css/theme_extra.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
 <script>
         // Current page data
-        var mkdocs_page_name = "Problem 1";
+        var mkdocs_page_name = "Problem 1: Measuring Earth\u0027s Gravitational Acceleration with a Pendulum";
         var mkdocs_page_input_path = "1 Physics/7 Measurements/Problem_1.md";
         var mkdocs_page_url = null;
       </script>
@@ -90,8 +90,36 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal current">7 Measurements</a>
 <ul class="current">
-<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
+<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1: Measuring Earth's Gravitational Acceleration with a Pendulum</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#motivation">Motivation</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#task">Task</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#procedure">Procedure</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#1-materials">1. Materials</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#2-setup">2. Setup</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#3-data-collection">3. Data Collection</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#calculations">Calculations</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#1-calculate-the-period-t-of-one-oscillation">1. Calculate the period \( T \) of one oscillation:</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#2-determine-gravitational-acceleration-g">2. Determine gravitational acceleration \( g \):</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#3-propagate-uncertainties-for-g">3. Propagate uncertainties for \( g \):</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#analysis">Analysis</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#deliverables">Deliverables</a>
+</li>
 </ul>
 </li>
 </ul>
@@ -163,7 +191,7 @@
 <li><a aria-label="Docs" class="icon icon-home" href="../../.."></a></li>
 <li class="breadcrumb-item">1 Physics</li>
 <li class="breadcrumb-item">7 Measurements</li>
-<li class="breadcrumb-item active">Problem 1</li>
+<li class="breadcrumb-item active">Problem 1: Measuring Earth's Gravitational Acceleration with a Pendulum</li>
 <li class="wy-breadcrumbs-aside">
 </li>
 </ul>
@@ -171,7 +199,109 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="problem-1">Problem 1</h1>
+<h1 id="problem-1-measuring-earths-gravitational-acceleration-with-a-pendulum">Problem 1: Measuring Earth's Gravitational Acceleration with a Pendulum</h1>
+<h2 id="motivation">Motivation</h2>
+<p>The acceleration due to gravity, denoted <span class="arithmatex">\( g \)</span>, is a fundamental constant influencing many physical phenomena. Accurate measurement of <span class="arithmatex">\( g \)</span> is crucial for understanding gravitational interactions, structural design, and experiments in various scientific fields.</p>
+<p>One classical approach to determine <span class="arithmatex">\( g \)</span> is through the oscillations of a simple pendulum, where the period depends on the local gravitational field strength.</p>
+<h2 id="task">Task</h2>
+<p>Measure the acceleration due to gravity <span class="arithmatex">\( g \)</span> using a pendulum and perform a detailed uncertainty analysis of your measurements.</p>
+<p>This exercise highlights rigorous measurement techniques, uncertainty quantification, and their significance in experimental physics.</p>
+<h2 id="procedure">Procedure</h2>
+<h3 id="1-materials">1. Materials</h3>
+<ul>
+<li>A string (approximately 1 or 1.5 meters long)</li>
+<li>A small weight (e.g., bag of coins, sugar bag, keychain) attached to the string</li>
+<li>Stopwatch or smartphone timer</li>
+<li>Ruler or measuring tape</li>
+</ul>
+<h3 id="2-setup">2. Setup</h3>
+<ul>
+<li>Attach the weight to one end of the string and fix the other end to a stable support.</li>
+<li>Measure the pendulum length <span class="arithmatex">\( L \)</span> from the suspension point to the center of the weight using the ruler or measuring tape.</li>
+<li>Record the resolution of the measuring tool. Calculate the length measurement uncertainty as half of the resolution:</li>
+</ul>
+<p>$$
+  \Delta L = \frac{\text{resolution}}{2}
+  $$</p>
+<h3 id="3-data-collection">3. Data Collection</h3>
+<ul>
+<li>Displace the pendulum by a small angle (&lt; 15°) and release it.</li>
+<li>Measure the time for 10 full oscillations <span class="arithmatex">\( T_{10} \)</span> and repeat this 10 times, recording all measurements.</li>
+<li>Calculate the mean time for 10 oscillations <span class="arithmatex">\( \overline{T}_{10} \)</span> and the standard deviation <span class="arithmatex">\( s_{T_{10}} \)</span>.</li>
+<li>Determine the uncertainty in the mean time as:</li>
+</ul>
+<p>$$
+  \Delta \overline{T}<em>{10} = \frac{s</em>{T_{10}}}{\sqrt{10}}
+  $$</p>
+<h2 id="calculations">Calculations</h2>
+<h3 id="1-calculate-the-period-t-of-one-oscillation">1. Calculate the period <span class="arithmatex">\( T \)</span> of one oscillation:</h3>
+<p>$$
+  T = \frac{\overline{T}_{10}}{10}
+  $$</p>
+<p>$$
+  \Delta T = \frac{\Delta \overline{T}_{10}}{10}
+  $$</p>
+<h3 id="2-determine-gravitational-acceleration-g">2. Determine gravitational acceleration <span class="arithmatex">\( g \)</span>:</h3>
+<p>$$
+  g = \frac{4 \pi^2 L}{T^2}
+  $$</p>
+<h3 id="3-propagate-uncertainties-for-g">3. Propagate uncertainties for <span class="arithmatex">\( g \)</span>:</h3>
+<p>$$
+  \frac{\Delta g}{g} = \sqrt{\left(\frac{\Delta L}{L}\right)^2 + \left(2 \frac{\Delta T}{T}\right)^2}
+  $$</p>
+<p>$$
+  \Delta g = g \times \frac{\Delta g}{g}
+  $$</p>
+<h2 id="analysis">Analysis</h2>
+<ol>
+<li>
+<p>Compare your measured value of <span class="arithmatex">\( g \)</span> with the standard value <span class="arithmatex">\( 9.81\, \text{m/s}^2 \)</span>.</p>
+</li>
+<li>
+<p>Discuss:</p>
+</li>
+<li>The impact of measurement resolution on <span class="arithmatex">\( L \)</span>.</li>
+<li>Variability in timing measurements and its effect on <span class="arithmatex">\( g \)</span>.</li>
+<li>Assumptions made during the experiment and potential limitations.</li>
+</ol>
+<h2 id="deliverables">Deliverables</h2>
+<ol>
+<li><strong>Tabulated data (Markdown table):</strong></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Trial</th>
+<th><span class="arithmatex">\( T_{10} \)</span> (s)</th>
+<th>Notes/Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>...</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>10</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>Calculated values for <span class="arithmatex">\( \overline{T}_{10} \)</span>, <span class="arithmatex">\( s_{T_{10}} \)</span>, <span class="arithmatex">\( \Delta \overline{T}_{10} \)</span>, <span class="arithmatex">\( T \)</span>, <span class="arithmatex">\( \Delta T \)</span>, <span class="arithmatex">\( g \)</span>, and <span class="arithmatex">\( \Delta g \)</span>.</p>
+</li>
+<li>
+<p><strong>Discussion</strong> on uncertainty sources and their impact on results.</p>
+</li>
+</ul>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
