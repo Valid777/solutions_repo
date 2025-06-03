@@ -15,7 +15,8 @@ This problem connects fundamental concepts of probability, geometry, and numeric
 $$
 \pi \approx 4 \times \frac{\text{points inside circle}}{\text{total points}}
 $$
- for a unit circle.
+
+for a unit circle.
 
 #### 2. Simulation
 - Generate random points in a 2D square bounding a unit circle.
@@ -25,9 +26,13 @@ $$
 #### 3. Visualization
 - Create a plot showing the randomly generated points, distinguishing those inside and outside the circle.
 
+![alt text](image-4.png)
+
 #### 4. Analysis
 - Investigate how the accuracy of the estimate improves as the number of points increases.
 - Discuss the convergence rate and computational considerations for this method.
+
+![alt text](image-5.png)
 
 ### Part 2: Estimating $\pi$ Using Buffon’s Needle
 
@@ -38,6 +43,7 @@ $$
 $$
 \pi \approx \frac{2 \times \text{needle length} \times \text{number of drops}}{\text{line spacing} \times \text{number of crossings}}
 $$
+
 #### 2. Simulation
 - Simulate the random dropping of a needle on a plane with parallel lines.
 - Count the number of times the needle crosses a line.
@@ -46,9 +52,13 @@ $$
 #### 3. Visualization
 - Create a graphical representation of the simulation, showing the needle positions relative to the lines.
 
+![alt text](image-6.png)
+
 #### 4. Analysis
 - Explore how the number of needle drops affects the estimate’s accuracy.
 - Compare the convergence rate of this method to the circle-based approach.
+
+![alt text](image-7.png)
 
 ## Deliverables
 
