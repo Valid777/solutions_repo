@@ -43,7 +43,6 @@ This problem connects fundamental concepts of probability, geometry, and numeric
 - Explore how the number of needle drops affects the estimate’s accuracy.
 - Compare the convergence rate of this method to the circle-based approach.
 
----
 
 ## Deliverables
 
