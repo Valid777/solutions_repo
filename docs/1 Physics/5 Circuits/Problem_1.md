@@ -24,6 +24,7 @@ This method:
 Describe an algorithm to calculate equivalent resistance using graph theory.
 
 **Requirements**:
+
 - 🔍 Identify series and parallel connections  
 - 🔁 Iteratively reduce the graph to a single equivalent resistance  
 - 📌 Handle nested combinations correctly  
