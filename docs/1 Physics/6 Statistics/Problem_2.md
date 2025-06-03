@@ -11,7 +11,11 @@ This problem connects fundamental concepts of probability, geometry, and numeric
 
 #### 1. Theoretical Foundation
 - Explain how the ratio of points inside a circle to the total number of points in a square can be used to estimate $\pi$.
-- Derive the formula $\pi \approx 4 \times (\text{points inside circle} / \text{total points})$ for a unit circle.
+- Derive the formula
+$$
+\pi \approx 4 \times \frac{\text{points inside circle}}{\text{total points}}
+$$
+ for a unit circle.
 
 #### 2. Simulation
 - Generate random points in a 2D square bounding a unit circle.
@@ -29,8 +33,11 @@ This problem connects fundamental concepts of probability, geometry, and numeric
 
 #### 1. Theoretical Foundation
 - Describe Buffon’s Needle problem, where $\pi$ can be estimated based on the probability of a needle crossing parallel lines on a plane.
-- Derive the formula $\pi \approx (2 \times \text{needle length} \times \text{number of drops}) / (\text{line spacing} \times \text{number of crossings})$.
+- Derive the formula 
 
+$$
+\pi \approx \frac{2 \times \text{needle length} \times \text{number of drops}}{\text{line spacing} \times \text{number of crossings}}
+$$
 #### 2. Simulation
 - Simulate the random dropping of a needle on a plane with parallel lines.
 - Count the number of times the needle crosses a line.
