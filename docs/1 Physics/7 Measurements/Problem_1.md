@@ -34,7 +34,13 @@ This exercise emphasizes rigorous measurement practices, uncertainty analysis, a
 #### 3. Data Collection:
 - Displace the pendulum slightly (~15°) and release it.
 - Measure the time for 10 full oscillations ($T_{10}$) and repeat this process 10 times. Record all 10 measurements.
+
+![alt text](image-2.png)
+
 - Calculate the mean time for 10 oscillations ($\overline{T_{10}}$) and the standard deviation ($s_{T_{10}}$).
+
+![alt text](image-3.png)
+
 - Determine the uncertainty in the mean time as:  
   $$
   \Delta \overline{T_{10}} = \frac{s_{T_{10}}}{\sqrt{n}}
@@ -66,8 +72,13 @@ $$
 
 #### 1. Compare your measured $g$ with the standard value (9.81 m/s²).
 
+![alt text](image-6.png)
+
 #### 2. Discuss:
 - The effect of measurement resolution on $\Delta L$.
+
+![alt text](image-5.png)
+
 - Variability in timing and its impact on $\Delta T$.
 - Any assumptions or experimental limitations.
 
