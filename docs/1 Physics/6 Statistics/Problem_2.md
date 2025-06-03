@@ -43,22 +43,29 @@ This problem connects fundamental concepts of probability, geometry, and numeric
 - Explore how the number of needle drops affects the estimate’s accuracy.
 - Compare the convergence rate of this method to the circle-based approach.
 
-## Deliverables
-1. **A Markdown document** with:
-   - Clear explanations of the methods and formulas.
-   - A discussion of theoretical foundations and results.
+---
 
-2. **Python scripts or notebooks** implementing the simulations, including:
+## Deliverables
+
+1. **Markdown Document:**
+
+   - Clear explanations of the methods and their corresponding formulas.
+   - A detailed discussion of the theoretical foundations and simulation results.
+
+2. **Python Scripts or Jupyter Notebooks Implementing the Simulations:**
+
    - Code for the circle-based Monte Carlo method.
    - Code for the Buffon’s Needle method.
 
-3. **Graphical outputs**:
-   - Plots showing random points for the circle-based method.
-   - Visualizations of needle positions for Buffon’s Needle.
+3. **Graphical Outputs:**
 
-4. **Analysis**:
-   - Tables or graphs showing the convergence of estimated π as a function of the number of iterations for both methods.
-   - A comparison of the methods in terms of accuracy and computational efficiency.
+   - Scatter plots displaying random points for the circle-based method, with points inside and outside the circle clearly distinguished.
+   - Visualizations illustrating needle positions relative to parallel lines for Buffon’s Needle.
+
+4. **Analysis:**
+
+   - Tables or graphs depicting the convergence of the estimated \(\pi\) value as a function of the number of iterations for both methods.
+   - A comparison of the two methods, evaluating their accuracy and computational efficiency.
 
 ## Hints and Resources
 - Use Python libraries such as NumPy for random number generation and Matplotlib for visualizations.
