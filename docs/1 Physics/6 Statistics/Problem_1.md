@@ -26,6 +26,7 @@ Choose and simulate from the following population distributions:
 
 For each distribution, generate a large population dataset (e.g., 100,000 values).
 
+![alt text](image.png)
 ---
 
 ### 2️⃣ Sampling and Visualization
@@ -36,6 +37,8 @@ For each distribution:
 - Compute the **sample mean**
 - Repeat the sampling process many times (e.g., 1000 repetitions)
 - Plot histograms of the sample means for each `n`
+
+![alt text](image-1.png)
 
 👉 **Observe how the distribution of sample means becomes more normal as `n` increases.**
 
@@ -49,6 +52,7 @@ Investigate:
 - 🔺 The effect of the original distribution’s shape on convergence speed
 - ⚖️ The impact of population variance on the spread of sampling distributions
 
+![alt text](image-2.png)
 ---
 
 ### 4️⃣ Practical Applications
@@ -69,6 +73,7 @@ Reflect on where CLT is used in real life:
 - 🧪 Python code used for simulations
 - 💬 Discussion of how results align with CLT expectations
 
+![alt text](image-3.png)
 ---
 
 ## 🧠 Hints & Tools
