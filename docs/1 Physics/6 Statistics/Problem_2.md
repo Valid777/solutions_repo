@@ -1,22 +1,22 @@
 # Problem 2: Estimating Pi using Monte Carlo Methods
 
 ## Motivation
-Monte Carlo simulations are a powerful class of computational techniques that use randomness to solve problems or estimate values. One of the most elegant applications of Monte Carlo methods is estimating the value of π through geometric probability. By randomly generating points and analyzing their positions relative to a geometric shape, we can approximate π in an intuitive and visually engaging way.
+Monte Carlo simulations are a powerful class of computational techniques that use randomness to solve problems or estimate values. One of the most elegant applications of Monte Carlo methods is estimating the value of $\pi$ through geometric probability. By randomly generating points and analyzing their positions relative to a geometric shape, we can approximate $\pi$ in an intuitive and visually engaging way.
 
-This problem connects fundamental concepts of probability, geometry, and numerical computation. It also provides a gateway to understanding how randomness can be harnessed to solve complex problems in physics, finance, and computer science. The Monte Carlo approach to π estimation highlights the versatility and simplicity of this method while offering practical insights into convergence rates and computational efficiency.
+This problem connects fundamental concepts of probability, geometry, and numerical computation. It also provides a gateway to understanding how randomness can be harnessed to solve complex problems in physics, finance, and computer science. The Monte Carlo approach to $\pi$ estimation highlights the versatility and simplicity of this method while offering practical insights into convergence rates and computational efficiency.
 
 ## Task
 
-### Part 1: Estimating π Using a Circle
+### Part 1: Estimating $\pi$ Using a Circle
 
 #### 1. Theoretical Foundation
-- Explain how the ratio of points inside a circle to the total number of points in a square can be used to estimate π.
-- Derive the formula π ≈ 4 × (points inside circle / total points) for a unit circle.
+- Explain how the ratio of points inside a circle to the total number of points in a square can be used to estimate $\pi$.
+- Derive the formula $\pi \approx 4 \times (\text{points inside circle} / \text{total points})$ for a unit circle.
 
 #### 2. Simulation
 - Generate random points in a 2D square bounding a unit circle.
 - Count the number of points falling inside the circle.
-- Estimate π based on the ratio of points inside the circle to the total points.
+- Estimate $\pi$ based on the ratio of points inside the circle to the total points.
 
 #### 3. Visualization
 - Create a plot showing the randomly generated points, distinguishing those inside and outside the circle.
@@ -25,16 +25,16 @@ This problem connects fundamental concepts of probability, geometry, and numeric
 - Investigate how the accuracy of the estimate improves as the number of points increases.
 - Discuss the convergence rate and computational considerations for this method.
 
-### Part 2: Estimating π Using Buffon’s Needle
+### Part 2: Estimating $\pi$ Using Buffon’s Needle
 
 #### 1. Theoretical Foundation
-- Describe Buffon’s Needle problem, where π can be estimated based on the probability of a needle crossing parallel lines on a plane.
-- Derive the formula π ≈ (2 × needle length × number of drops) / (line spacing × number of crossings).
+- Describe Buffon’s Needle problem, where $\pi$ can be estimated based on the probability of a needle crossing parallel lines on a plane.
+- Derive the formula $\pi \approx (2 \times \text{needle length} \times \text{number of drops}) / (\text{line spacing} \times \text{number of crossings})$.
 
 #### 2. Simulation
 - Simulate the random dropping of a needle on a plane with parallel lines.
 - Count the number of times the needle crosses a line.
-- Estimate π based on the derived formula.
+- Estimate $\pi$ based on the derived formula.
 
 #### 3. Visualization
 - Create a graphical representation of the simulation, showing the needle positions relative to the lines.
@@ -47,23 +47,23 @@ This problem connects fundamental concepts of probability, geometry, and numeric
 
 1. **Markdown Document:**
 
-   - Clear explanations of the methods and their corresponding formulas.
-   - A detailed discussion of the theoretical foundations and simulation results.
+    - Clear explanations of the methods and their corresponding formulas.
+    - A detailed discussion of the theoretical foundations and simulation results.
 
 2. **Python Scripts or Jupyter Notebooks Implementing the Simulations:**
 
-   - Code for the circle-based Monte Carlo method.
-   - Code for the Buffon’s Needle method.
+    - Code for the circle-based Monte Carlo method.
+    - Code for the Buffon’s Needle method.
 
 3. **Graphical Outputs:**
 
-   - Scatter plots displaying random points for the circle-based method, with points inside and outside the circle clearly distinguished.
-   - Visualizations illustrating needle positions relative to parallel lines for Buffon’s Needle.
+    - Scatter plots displaying random points for the circle-based method, with points inside and outside the circle clearly distinguished.
+    - Visualizations illustrating needle positions relative to parallel lines for Buffon’s Needle.
 
 4. **Analysis:**
 
-   - Tables or graphs depicting the convergence of the estimated \(\pi\) value as a function of the number of iterations for both methods.
-   - A comparison of the two methods, evaluating their accuracy and computational efficiency.
+    - Tables or graphs depicting the convergence of the estimated $\pi$ value as a function of the number of iterations for both methods.
+    - A comparison of the two methods, evaluating their accuracy and computational efficiency.
 
 ## Hints and Resources
 - Use Python libraries such as NumPy for random number generation and Matplotlib for visualizations.
