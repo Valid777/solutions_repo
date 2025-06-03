@@ -84,6 +84,14 @@
 <ul>
 <li class="toctree-l4"><a class="reference internal" href="#option-1-simplified-task-algorithm-description">✅ Option 1: Simplified Task – Algorithm Description</a>
 </li>
+<li class="toctree-l4"><a class="reference internal" href="#option-2-advanced-task-full-implementation">🧠 Option 2: Advanced Task – Full Implementation</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#deliverables">📦 Deliverables</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#hints-resources">💡 Hints &amp; Resources</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#applications">🌐 Applications</a>
+</li>
 </ul>
 </li>
 </ul>
@@ -181,25 +189,25 @@
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1-equivalent-resistance-using-graph-theory">🧮 Problem 1: Equivalent Resistance Using Graph Theory</h1>
 <h2 id="motivation">📘 Motivation</h2>
-<p>Calculating equivalent resistance is a fundamental problem in electrical circuits, essential for understanding and designing efficient systems. Traditional methods involve iteratively applying series and parallel resistor rules, which can become cumbersome for complex circuits. </p>
+<p>Calculating equivalent resistance is a fundamental problem in electrical circuits, essential for understanding and designing efficient systems. Traditional methods involve iteratively applying series and parallel resistor rules, which can become cumbersome for complex circuits.</p>
 <p>Graph theory provides a powerful and algorithmic alternative by representing:</p>
 <ul>
-<li>🔹 <strong>Nodes</strong> as circuit junctions</li>
+<li>🔹 <strong>Nodes</strong> as circuit junctions  </li>
 <li>🔸 <strong>Edges</strong> as resistors, with weights equal to their resistance values</li>
 </ul>
 <p>This method:
-- Streamlines calculations
-- Enables automated analysis
-- Offers insights into electrical-mathematical relationships
-- Has practical applications in simulation software, network design, and optimization</p>
+- Streamlines calculations<br/>
+- Enables automated analysis<br/>
+- Offers insights into electrical-mathematical relationships<br/>
+- Has practical applications in simulation software, network design, and optimization  </p>
 <hr/>
 <h2 id="task-options">🎯 Task Options</h2>
 <h3 id="option-1-simplified-task-algorithm-description">✅ Option 1: Simplified Task – Algorithm Description</h3>
-<p><strong>Describe an algorithm</strong> to calculate equivalent resistance using graph theory.</p>
-<p>Requirements:
-- 🔍 Identify series and parallel connections
-- 🔁 Iteratively reduce the graph to a single equivalent resistance
-- 📌 Handle nested combinations correctly</p>
+<p>Describe an algorithm to calculate equivalent resistance using graph theory.</p>
+<p><strong>Requirements</strong>:
+- 🔍 Identify series and parallel connections<br/>
+- 🔁 Iteratively reduce the graph to a single equivalent resistance<br/>
+- 📌 Handle nested combinations correctly  </p>
 <h4 id="pseudocode-outline">🔧 Pseudocode Outline</h4>
 <pre><code class="language-text">function simplify_graph(graph, start_node, end_node):
     while graph has more than two nodes:
@@ -212,40 +220,52 @@
                 find parallel edges and replace with equivalent resistance
     return resistance between start_node and end_node
 </code></pre>
-<p>.</p>
-<p>🧠 Option 2: Advanced Task – Full Implementation
-Write a full implementation of the algorithm in a language of your choice (e.g., Python).</p>
-<p>The implementation should:</p>
-<p>✅ Accept a circuit graph as input</p>
-<p>⚙️ Handle nested and arbitrary resistor configurations</p>
-<p>📤 Output the final equivalent resistance</p>
-<p>🔬 Be tested on multiple examples:</p>
-<p>Series and parallel resistors</p>
-<p>Nested combinations</p>
-<p>Complex cyclic graphs</p>
-<p>Consider using libraries like networkx (for Python) for efficient graph manipulation.</p>
-<p>📦 Deliverables
-🧾 A detailed pseudocode (or full implementation)</p>
-<p>🧪 Three tested input examples with analysis</p>
-<p>📈 Graphical or printed output of equivalent resistance</p>
-<p>📊 Brief analysis of algorithm efficiency and potential improvements</p>
-<p>💡 Hints &amp; Resources
-🧠 Focus on iterative graph simplification:</p>
-<p>Detect series chains for reduction</p>
-<p>Identify cycles for parallel combinations</p>
-<p>🔍 Use depth-first search (DFS) or other traversals to find patterns</p>
-<p>🛠 Tools:</p>
-<p>Python + networkx or similar</p>
-<p>Adjacency list or matrix for custom representation</p>
-<p>🧪 Verify small cases manually</p>
-<p>🌐 Applications
-📐 Electrical circuit simplification</p>
-<p>⚡ Power grid analysis</p>
-<p>🧩 Simulation software</p>
-<p>🧠 Algorithm design in computer science</p>
-<p>yaml
-Copy
-Edit</p>
+<h3 id="option-2-advanced-task-full-implementation">🧠 Option 2: Advanced Task – Full Implementation</h3>
+<p>Write a full implementation of the algorithm in a language of your choice (e.g., Python).</p>
+<hr/>
+<h4 id="the-implementation-should">📌 The implementation should:</h4>
+<ul>
+<li>✅ Accept a circuit graph as input  </li>
+<li>⚙️ Handle nested and arbitrary resistor configurations  </li>
+<li>📤 Output the final equivalent resistance  </li>
+<li>🔬 Be tested on multiple examples:</li>
+<li>Series and parallel resistors  </li>
+<li>Nested combinations  </li>
+<li>Complex cyclic graphs  </li>
+</ul>
+<blockquote>
+<p>💡 Consider using libraries like <code>networkx</code> (for Python) for efficient graph manipulation.</p>
+</blockquote>
+<hr/>
+<h3 id="deliverables">📦 Deliverables</h3>
+<ul>
+<li>🧾 A detailed pseudocode (or full implementation)  </li>
+<li>🧪 Three tested input examples with analysis  </li>
+<li>📈 Graphical or printed output of equivalent resistance  </li>
+<li>📊 Brief analysis of algorithm efficiency and potential improvements  </li>
+</ul>
+<hr/>
+<h3 id="hints-resources">💡 Hints &amp; Resources</h3>
+<ul>
+<li>🧠 Focus on iterative graph simplification:</li>
+<li>Detect series chains for reduction  </li>
+<li>Identify cycles for parallel combinations  </li>
+<li>🔍 Use depth-first search (DFS) or other traversals to find patterns  </li>
+</ul>
+<h4 id="tools">🛠 Tools:</h4>
+<ul>
+<li>Python + <code>networkx</code> or similar  </li>
+<li>Adjacency list or matrix for custom representation  </li>
+<li>🧪 Verify small cases manually  </li>
+</ul>
+<hr/>
+<h3 id="applications">🌐 Applications</h3>
+<ul>
+<li>📐 Electrical circuit simplification  </li>
+<li>⚡ Power grid analysis  </li>
+<li>🧩 Simulation software  </li>
+<li>🧠 Algorithm design in computer science  </li>
+</ul>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
