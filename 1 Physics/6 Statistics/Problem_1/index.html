@@ -6,13 +6,13 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../../../img/favicon.ico" rel="shortcut icon"/>
-<title>Problem 1 - Physics and Mathematics</title>
+<title>🧮 Problem 2: Exploring the Central Limit Theorem through Simulations - Physics and Mathematics</title>
 <link href="../../../css/theme.css" rel="stylesheet"/>
 <link href="../../../css/theme_extra.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
 <script>
         // Current page data
-        var mkdocs_page_name = "Problem 1";
+        var mkdocs_page_name = "\ud83e\uddee Problem 2: Exploring the Central Limit Theorem through Simulations";
         var mkdocs_page_input_path = "1 Physics/6 Statistics/Problem_1.md";
         var mkdocs_page_url = null;
       </script>
@@ -82,8 +82,28 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal current">6 Statistics</a>
 <ul class="current">
-<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
+<li class="toctree-l2 current"><a class="reference internal current" href="#">🧮 Problem 2: Exploring the Central Limit Theorem through Simulations</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#motivation">📘 Motivation</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#task-breakdown">🎯 Task Breakdown</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#1-simulating-sampling-distributions">1️⃣ Simulating Sampling Distributions</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#2-sampling-and-visualization">2️⃣ Sampling and Visualization</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#3-parameter-exploration">3️⃣ Parameter Exploration</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#4-practical-applications">4️⃣ Practical Applications</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#deliverables">📦 Deliverables</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#hints-tools">🧠 Hints &amp; Tools</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#applications">🌐 Applications</a>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Problem_2/">Problem 2</a>
@@ -163,7 +183,7 @@
 <li><a aria-label="Docs" class="icon icon-home" href="../../.."></a></li>
 <li class="breadcrumb-item">1 Physics</li>
 <li class="breadcrumb-item">6 Statistics</li>
-<li class="breadcrumb-item active">Problem 1</li>
+<li class="breadcrumb-item active">🧮 Problem 2: Exploring the Central Limit Theorem through Simulations</li>
 <li class="wy-breadcrumbs-aside">
 </li>
 </ul>
@@ -171,7 +191,81 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="problem-1">Problem 1</h1>
+<h1 id="problem-2-exploring-the-central-limit-theorem-through-simulations">🧮 Problem 2: Exploring the Central Limit Theorem through Simulations</h1>
+<h2 id="motivation">📘 Motivation</h2>
+<p>The Central Limit Theorem (CLT) is a cornerstone of probability and statistics. It states that the <strong>sampling distribution of the sample mean approaches a normal distribution</strong> as the sample size increases, regardless of the population’s original distribution.</p>
+<p>This theorem is crucial in practice because it:</p>
+<ul>
+<li>📈 Justifies the use of normal approximations in statistical inference</li>
+<li>🔍 Helps estimate population parameters from samples</li>
+<li>🛠️ Is used in quality control and hypothesis testing</li>
+</ul>
+<p>Simulations provide a hands-on, intuitive way to <strong>visualize and understand</strong> this powerful concept.</p>
+<hr/>
+<h2 id="task-breakdown">🎯 Task Breakdown</h2>
+<h3 id="1-simulating-sampling-distributions">1️⃣ Simulating Sampling Distributions</h3>
+<p>Choose and simulate from the following population distributions:</p>
+<ul>
+<li>📏 <strong>Uniform distribution</strong></li>
+<li>⏱ <strong>Exponential distribution</strong></li>
+<li>🎲 <strong>Binomial distribution</strong></li>
+</ul>
+<p>For each distribution, generate a large population dataset (e.g., 100,000 values).</p>
+<hr/>
+<h3 id="2-sampling-and-visualization">2️⃣ Sampling and Visualization</h3>
+<p>For each distribution:</p>
+<ul>
+<li>Randomly take samples of sizes <code>n = 5, 10, 30, 50</code></li>
+<li>Compute the <strong>sample mean</strong></li>
+<li>Repeat the sampling process many times (e.g., 1000 repetitions)</li>
+<li>Plot histograms of the sample means for each <code>n</code></li>
+</ul>
+<p>👉 <strong>Observe how the distribution of sample means becomes more normal as <code>n</code> increases.</strong></p>
+<hr/>
+<h3 id="3-parameter-exploration">3️⃣ Parameter Exploration</h3>
+<p>Investigate:</p>
+<ul>
+<li>📏 How sample size <code>n</code> affects the convergence to a normal distribution</li>
+<li>🔺 The effect of the original distribution’s shape on convergence speed</li>
+<li>⚖️ The impact of population variance on the spread of sampling distributions</li>
+</ul>
+<hr/>
+<h3 id="4-practical-applications">4️⃣ Practical Applications</h3>
+<p>Reflect on where CLT is used in real life:</p>
+<ul>
+<li>📊 <strong>Estimating population means</strong> in surveys or experiments</li>
+<li>🏭 <strong>Quality control</strong> in manufacturing processes</li>
+<li>💸 <strong>Predictive modeling</strong> in economics and finance</li>
+<li>📐 <strong>Risk analysis</strong> in engineering and insurance</li>
+</ul>
+<hr/>
+<h2 id="deliverables">📦 Deliverables</h2>
+<ul>
+<li>✅ A Colab notebook or Markdown report with all steps</li>
+<li>📉 Histograms for all sample sizes and distributions</li>
+<li>🧪 Python code used for simulations</li>
+<li>💬 Discussion of how results align with CLT expectations</li>
+</ul>
+<hr/>
+<h2 id="hints-tools">🧠 Hints &amp; Tools</h2>
+<ul>
+<li>🔢 Use <code>numpy</code> for generating random data:</li>
+<li><code>np.random.uniform(...)</code></li>
+<li><code>np.random.exponential(...)</code></li>
+<li><code>np.random.binomial(...)</code></li>
+<li>📊 Use <code>matplotlib.pyplot</code> or <code>seaborn</code> to draw histograms</li>
+<li>🔁 Loop through different sample sizes and store sample means</li>
+<li>📝 Label axes and titles clearly to show convergence visually</li>
+<li>📚 Start with simpler distributions (e.g., uniform) before exploring complex ones</li>
+</ul>
+<hr/>
+<h2 id="applications">🌐 Applications</h2>
+<ul>
+<li>📐 Statistical Inference</li>
+<li>⚡ Power Grid Forecasting</li>
+<li>🧪 Simulation Models</li>
+<li>🧠 Machine Learning Model Evaluation</li>
+</ul>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
