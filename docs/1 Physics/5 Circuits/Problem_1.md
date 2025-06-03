@@ -24,11 +24,11 @@ This method:
 Describe an algorithm to calculate equivalent resistance using graph theory.
 
 **Requirements**:
-
 - 🔍 Identify series and parallel connections  
 - 🔁 Iteratively reduce the graph to a single equivalent resistance  
 - 📌 Handle nested combinations correctly  
 
+![alt text](image.png)
 #### 🔧 Pseudocode Outline
 
 ```text
@@ -59,6 +59,9 @@ Write a full implementation of the algorithm in a language of your choice (e.g.,
   - Nested combinations  
   - Complex cyclic graphs  
 
+![alt text](image-2.png)
+
+![alt text](image-3.png)
 > 💡 Consider using libraries like `networkx` (for Python) for efficient graph manipulation.
 
 ---
@@ -70,6 +73,7 @@ Write a full implementation of the algorithm in a language of your choice (e.g.,
 - 📈 Graphical or printed output of equivalent resistance  
 - 📊 Brief analysis of algorithm efficiency and potential improvements  
 
+![alt text](image-1.png)
 ---
 
 ### 💡 Hints & Resources
